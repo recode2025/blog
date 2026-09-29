@@ -1,0 +1,11 @@
+[Unit]
+Description=Check for blog updates every day at noon in Shanghai
+
+[Timer]
+OnCalendar=*-*-* 12:00:00 Asia/Shanghai
+Persistent=true
+AccuracySec=1s
+Unit=blog-pull.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,8 @@
+<ul class="tf-category-children">
+  <% nodes.forEach(node => { %>
+    <li>
+      <a href="<%= url_for(node.term.path) %>"><span class="tf-term-name"><%= node.term.name %></span><span class="tf-term-count" aria-label="<%= node.term.posts.length %> 篇文章"><%= node.term.posts.length %></span></a>
+      <% if (node.children.length) { %><%- partial('taxonomy-category', { nodes: node.children }) %><% } %>
+    </li>
+  <% }); %>
+</ul>

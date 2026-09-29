@@ -1,0 +1,3 @@
+<% if (page.content && page.toc !== false) { const outline = toc(page.content, {list_number: false, min_depth: 2, max_depth: 4}); if (outline) { %>
+<details class="tf-mobile-outline"><summary>本文目录</summary><nav aria-label="文章目录"><%- outline %></nav></details>
+<% } } %>

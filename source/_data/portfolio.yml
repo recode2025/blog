@@ -1,0 +1,67 @@
+# Add your works here; put images in source/assets/gallery/.
+# category: 3D, Generative, or Design. Set demo: false for your work.
+# Optional url links to a project page or external website.
+- title: Orbit
+  subtitle: 轨道与引力
+  category: 3D
+  year: '2026'
+  image: /assets/gallery/01-orbit.svg
+  description: 一枚悬浮的紫色圆环，观察光线在曲面上的流动。这是展厅的示例展品，可替换为你的建模或渲染作品。
+  tools: [Form, Light, Material]
+  demo: true
+- title: Folded Light
+  subtitle: 折叠的光
+  category: Design
+  year: '2026'
+  image: /assets/gallery/02-fold.svg
+  description: 让平面折出空间，在几何的交界处留下柔和的色彩。这是用于预览布局的示例展品。
+  tools: [Geometry, Color Study]
+  demo: true
+- title: Wave Field
+  subtitle: 波的形状
+  category: Generative
+  year: '2026'
+  image: /assets/gallery/03-wave.svg
+  description: 蓝色曲线在暗处叠加，组成一片有节奏的波场。这是用于预览布局的示例展品。
+  tools: [Algorithm, Curves]
+  demo: true
+- title: A Fine Balance
+  subtitle: 微妙的平衡
+  category: 3D
+  year: '2026'
+  image: /assets/gallery/04-balance.svg
+  description: 球体、立方体与平面的一次组合练习。这是用于预览布局的示例展品。
+  tools: [Composition, Geometry]
+  demo: true
+- title: Digital Terrain
+  subtitle: 数字地形
+  category: Generative
+  year: '2026'
+  image: /assets/gallery/05-grid.svg
+  description: 用规则的线条描述起伏，让数学长成一片地形。这是用于预览布局的示例展品。
+  tools: [Grid, Procedural]
+  demo: true
+- title: Soft Chrome
+  subtitle: 柔软的金属
+  category: 3D
+  year: '2026'
+  image: /assets/gallery/06-chrome.svg
+  description: 在冷色背景里探索金属的高光、倒影与轮廓。这是用于预览布局的示例展品。
+  tools: [Surface, Reflection]
+  demo: true
+- title: Form / Function
+  subtitle: 字形实验
+  category: Design
+  year: '2026'
+  image: /assets/gallery/07-type.svg
+  description: 用字的大小、间距和排列搭建画面。这是用于预览布局的示例展品。
+  tools: [Typography, Layout]
+  demo: true
+- title: Little Universes
+  subtitle: 微小的宇宙
+  category: Generative
+  year: '2026'
+  image: /assets/gallery/08-particle.svg
+  description: 散落的粒子与轨迹，组成一个安静的微型宇宙。这是用于预览布局的示例展品。
+  tools: [Particles, Space]
+  demo: true

@@ -1,0 +1,466 @@
+# Pixel & Pointer · Tephrofos edition
+# Override Volantis through its documented configuration API; keep the theme submodule clean.
+# Docs: https://volantis.js.org/v6/theme-settings/
+debug: false
+content_visibility: false
+scroll_smooth: true
+dns_prefetch: []
+replace: []
+
+# These standalone pages are supplied by source/ and the site's generators.
+site_tree:
+  404:
+    enable: false
+  tag:
+    enable: false
+  category:
+    enable: false
+
+navbar:
+  visiable: auto
+  logo:
+    img: ''
+    icon: fa-solid fa-terminal
+    title: 'Pixel &amp; Pointer'
+  menu:
+    - name: 首页
+      icon: fa-solid fa-house
+      url: /
+    - name: 文章
+      icon: fa-solid fa-code
+      url: /archives/
+    - name: 作品
+      icon: fa-solid fa-cubes
+      url: /gallery/
+    - name: 分类
+      icon: fa-solid fa-folder-open
+      url: /categories/
+    - name: 标签
+      icon: fa-solid fa-hashtag
+      url: /tags/
+    - name: 关于
+      icon: fa-solid fa-user
+      url: /about/
+  search: 搜索文章、标签或代码
+
+# Keep the native Volantis dock cover; character art is a restrained visual layer.
+cover:
+  height_scheme: full
+  layout_scheme: dock
+  display:
+    home: true
+    archive: false
+    others: false
+  background: /assets/tephrofos/portrait-1080.webp
+  logo: ''
+  title: Pixel & Pointer
+  subtitle: Graphics · Code · Algorithms · Creation
+  features:
+    - name: 文章
+      icon: fa-solid fa-code
+      url: /archives/
+    - name: 作品
+      icon: fa-solid fa-cubes
+      url: /gallery/
+    - name: 分类
+      icon: fa-solid fa-folder-open
+      url: /categories/
+    - name: 标签
+      icon: fa-solid fa-hashtag
+      url: /tags/
+    - name: 关于
+      icon: fa-solid fa-user
+      url: /about/
+    - name: RSS
+      icon: fa-solid fa-rss
+      url: /atom.xml
+
+article:
+  preview:
+    scheme: landscape
+    pin_icon: ''
+    auto_title: true
+    auto_excerpt: true
+    hide_excerpt: false
+    line_style: solid
+    author: false
+    readmore: always
+  body:
+    top_meta: [author, category, date, wordcount]
+    bottom_meta: [updated, tags]
+    footer_widget:
+      references:
+        title: 参考资料
+        icon: fa-solid fa-book
+      recommended_article:
+        enable: false
+        placeholder_img: ''
+      related_posts:
+        enable: false
+        placeholder_img: ''
+      copyright:
+        enable: true
+        permalink: '原文链接'
+        content:
+          - '作者 recode。引用或转载时请注明作者与原文链接。'
+          - permalink
+        custom: false
+      donate:
+        enable: false
+        images: []
+    meta_library:
+      author:
+        avatar: /assets/tephrofos/avatar.webp
+        name: recode
+        url: /about/
+      date:
+        icon: fa-solid fa-calendar
+        title: ''
+        format: YYYY-MM-DD
+      updated:
+        icon: fa-solid fa-clock
+        title: '更新于 '
+        format: YYYY-MM-DD
+      category:
+        icon: fa-solid fa-folder-open
+      tags:
+        icon: fa-solid fa-hashtag
+      share: []
+
+# Self-hosted Artalk endpoint; each article keeps its own comment thread.
+comments:
+  service: artalk
+  artalk:
+    server: https://comments.recode88.cn
+    path: ''
+    placeholder: 欢迎留言交流
+    visitor: false
+    latex: false
+  giscus:
+    repo: ''
+    repo-id: ''
+    category: ''
+    category-id: ''
+    mapping: pathname
+    lang: zh-CN
+  disqus:
+    shortname: ''
+  utterances:
+    repo: ''
+  beaudar:
+    repo: ''
+
+sidebar:
+  for:
+    home: [blogger, category, tagcloud, recent]
+    index_blog: [blogger, category, tagcloud]
+    index_wiki: [recent]
+    notebooks: [recent]
+    notes: [toc, recent]
+    post: [toc, recent]
+    wiki: [toc, tree]
+    note: [toc, tagtree]
+    page: [toc]
+  widget_library:
+    blogger:
+      class: blogger
+      display: [desktop]
+      avatar: /assets/tephrofos/author-avatar.webp
+      shape: circle
+      url: /about/
+      title: recode
+      subtitle: '写代码，研究图形，记录探索。'
+      jinrishici: false
+      social: []
+    toc:
+      class: toc
+      display: [desktop, mobile]
+      sticky: true
+      header:
+        icon: fa-solid fa-list
+        title: 本文目录
+      list_number: false
+      min_depth: 2
+      max_depth: 4
+    category:
+      class: category
+      display: [desktop]
+      header:
+        icon: fa-solid fa-folder-open
+        title: 研究方向
+        url: /categories/
+    tagcloud:
+      class: tagcloud
+      display: [desktop]
+      header:
+        icon: fa-solid fa-hashtag
+        title: 主题索引
+        url: /tags/
+      min_font: 13
+      max_font: 17
+      color: false
+    recent:
+      class: recent
+      display: [desktop]
+      header:
+        icon: fa-solid fa-clock
+        title: 最近更新
+      limit: 5
+
+site_footer:
+  layout: [social, copyright, credit]
+  social:
+    - icon: fa-solid fa-rss
+      url: /atom.xml
+  source: ''
+  copyright: '© 2026 [recode](/about/) · Pixel & Pointer'
+  credit: 'Built with [Hexo](https://hexo.io/) & [Volantis](https://volantis.js.org/) · Tephrofos edition'
+
+tag_plugins:
+  note:
+    iconfont: 'Font Awesome 6 Free'
+  link:
+    placeholder: /assets/tephrofos/favicon.svg
+  Image:
+    fancybox: true
+  checkbox:
+    interactive: false
+  Checkbox:
+    interactive: false
+  chat:
+    api: ''
+
+# Only low-cost, useful defaults. Math and diagrams are opt-in per article:
+# front matter -> plugins: [katex, mermaid]
+plugins:
+  globalJquery: false
+  fontawesome: true
+  sitesjs:
+    enable: false
+  friendsjs:
+    enable: false
+  fpostsjs:
+    enable: false
+  contributorsjs:
+    enable: false
+  preload:
+    enable: false
+  lazyload:
+    enable: true
+    onlypost: true
+    loadingImg: ''
+    blurIn: false
+  code_highlight: highlightjs
+  highlightjs:
+    copy_code: true
+    js: ''
+    css: ''
+  wordcount:
+    enable: true
+  darkmode:
+    enable: true
+  mermaid:
+    theme: neutral
+  pjax:
+    enable: false
+  nprogress:
+    enable: false
+  pace:
+    enable: false
+    read_progress: false
+  parallax:
+    enable: false
+    images: []
+  scrollreveal:
+    enable: false
+  busuanzi:
+    enable: false
+  aplayer:
+    enable: false
+    id: ''
+    audio: []
+  nodewaves:
+    enable: false
+  fontawesome_animation:
+    enable: false
+  comment_typing:
+    enable: false
+  swiper:
+    enable: false
+  message:
+    enable: false
+    copyright:
+      enable: false
+    aplayer:
+      enable: false
+  tianliGPT:
+    enable: false
+    key: ''
+  chat_service: ''
+  artitalk:
+    appId: ''
+    appKey: ''
+  bbtalk:
+    appId: ''
+    appKey: ''
+    serverURLs: ''
+  memos:
+    url: ''
+    id: ''
+  killOldVersionsOfIE:
+    enable: false
+  killNoScript:
+    enable: false
+
+# Native Volantis search reads the local search.json index on demand.
+search:
+  enable: true
+  service: hexo
+rightmenus:
+  enable: false
+  order: []
+
+data_services:
+  siteinfo:
+    api: ''
+
+# Serve shared dependencies locally; load Artalk assets from its own backend.
+cdn_system:
+  priority: [custom, local, npm, static, cdnjs]
+  system_config:
+    custom:
+      volantis_search_hexo: /js/volantis-search.js
+      jquery: /vendor/jquery-3.7.1/dist/jquery.min.js
+      fontawesome: /vendor/fontawesome-6.6.0/css/all.min.css
+      vanilla-lazyload: /vendor/vanilla-lazyload-19.1.3/dist/lazyload.min.js
+      fancybox_js: /vendor/fancybox-5.0.36/dist/fancybox/fancybox.umd.js
+      fancybox_css: /vendor/fancybox-5.0.36/dist/fancybox/fancybox.css
+      katex_js: /vendor/katex-0.16.22/dist/katex.min.js
+      katex_css: /vendor/katex-0.16.22/dist/katex.min.css
+      katex_render: /vendor/katex-0.16.22/dist/contrib/auto-render.min.js
+      mermaid_js: /vendor/mermaid-11.12.0/dist/mermaid.min.js
+      artalk_js: https://comments.recode88.cn/dist/Artalk.js
+      artalk_css: https://comments.recode88.cn/dist/Artalk.css
+
+custom_css:
+  cursor:
+    enable: false
+  font_smoothing: true
+  max_width: 1080px
+  navbar:
+    height: 64px
+    width: auto
+    effect: [shadow]
+  sidebar:
+    effect: [shadow]
+  body:
+    effect: [shadow]
+    highlight:
+      language: true
+      grayscale: false
+      copy_btn: true
+    text_align:
+      p: left
+  gap:
+    h2: 40px
+    h3: 28px
+    h4: 20px
+    p: 1em
+    line_height: 1.8
+  border_radius:
+    card: 12px
+    codeblock: 8px
+    searchbar: 10px
+    button: 6px
+  fontsize:
+    root: 16px
+    code: .875rem
+    meta: .8125rem
+  fontfamily:
+    logofont:
+      fontfamily: '"Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif'
+      name: ''
+      url: ''
+    bodyfont:
+      fontfamily: '"Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif'
+      name: ''
+      url: ''
+    codefont:
+      fontfamily: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace'
+      name: ''
+      url: ''
+
+color_scheme:
+  common:
+    theme: '#7956bc'
+    link: '#7045a8'
+    button: '#7956bc'
+    hover: '#c03d72'
+    inner: '#ffffff'
+    selection: 'alpha(#a583c9, 0.22)'
+  light:
+    site_bg: '#f5f4f8'
+    site_inner: '#242330'
+    site_footer: '#686572'
+    card: '#ffffff'
+    text: '#302d3b'
+    block: '#f3f0f7'
+    codeblock: '#f3f0f7'
+    inlinecode: '#a23869'
+    h1: '#242330'
+    h2: '#242330'
+    h3: '#302d3b'
+    h4: '#302d3b'
+    h5: '#45404f'
+    h6: '#686572'
+    p: '#45404f'
+    list: '#686572'
+    meta: '#777080'
+    copyright_bkg: '#f3f0f7'
+  dark:
+    site_bd: '#121118'
+    site_bg: '#16151e'
+    site_inner: '#f0edf7'
+    site_footer: '#a49bad'
+    card: '#201e2b'
+    text: '#e5dfed'
+    block: '#2a2636'
+    codeblock: '#191722'
+    inlinecode: '#e897bc'
+    h1: '#f0edf7'
+    h2: '#f0edf7'
+    h3: '#e5dfed'
+    h4: '#e5dfed'
+    h5: '#ccc3d5'
+    h6: '#afa4bb'
+    p: '#ccc3d5'
+    list: '#afa4bb'
+    meta: '#a49bad'
+    copyright_bkg: '#292534'
+    brightness: 95%
+
+seo:
+  use_tags_as_keywords: true
+  use_excerpt_as_description: true
+open_graph:
+  image: /assets/tephrofos/avatar.webp
+  twitter_card: summary
+structured_data:
+  enable: true
+  data:
+    person:
+      sns: []
+    logo:
+      path: /assets/tephrofos/avatar.webp
+      width: 192
+      height: 192
+
+default:
+  avatar: /assets/tephrofos/avatar.webp
+  link: /assets/tephrofos/favicon.svg
+  cover: /assets/tephrofos/avatar.webp
+  image: /assets/tephrofos/favicon.svg
+  topic: /assets/tephrofos/favicon.svg
+  project: /assets/tephrofos/favicon.svg
+  banner: /assets/tephrofos/avatar.webp
+  loading: /assets/tephrofos/favicon.svg

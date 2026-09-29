@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x2=".7" y2="1"><stop stop-color="#e4eff5"/><stop offset="1" stop-color="#b6cddc"/></linearGradient>
+    <linearGradient id="metal" x1=".15" y1="0" x2=".85" y2="1"><stop stop-color="#f7fdff"/><stop offset=".14" stop-color="#a8bdcf"/><stop offset=".29" stop-color="#eef8ff"/><stop offset=".38" stop-color="#9daebd"/><stop offset=".45" stop-color="#192b40"/><stop offset=".5" stop-color="#060e1d"/><stop offset=".53" stop-color="#f5faff"/><stop offset=".63" stop-color="#b3c4d6"/><stop offset=".77" stop-color="#516578"/><stop offset=".88" stop-color="#c1d3df"/><stop offset="1" stop-color="#eff9ff"/></linearGradient>
+    <radialGradient id="ball" cx=".34" cy=".18" r=".86"><stop stop-color="#fff"/><stop offset=".18" stop-color="#c4d6e5"/><stop offset=".43" stop-color="#f2faff"/><stop offset=".49" stop-color="#102234"/><stop offset=".61" stop-color="#466078"/><stop offset=".73" stop-color="#d6e6f0"/><stop offset=".87" stop-color="#7b91a3"/><stop offset="1" stop-color="#c3d3df"/></radialGradient>
+    <filter id="shadow" x="-50%" y="-150%" width="200%" height="400%"><feGaussianBlur stdDeviation="17"/></filter>
+    <linearGradient id="highlight" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h800v1000H0z"/>
+  <ellipse cx="412" cy="806" rx="229" ry="31" fill="#304c61" opacity=".28" filter="url(#shadow)"/>
+  <path d="M376 192c100-40 214 36 223 141 5 66-31 100-10 150 17 42 84 60 70 146-12 78-106 131-180 115-60-13-68-61-116-69-50-9-85 48-147 16-72-37-73-120-30-164 40-42 98-40 108-91 10-48-35-73-27-132 7-53 54-92 109-112Z" fill="url(#metal)" stroke="#e5f2fa" stroke-width="1.5"/>
+  <path d="M325 250c66-74 202-55 241 23" fill="none" stroke="url(#highlight)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M306 327c-7 55 31 85 16 128-14 44-68 53-103 83" fill="none" stroke="#effbff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="544" cy="733" r="78" fill="url(#ball)" stroke="#d6e7f2" stroke-width="1"/>
+  <ellipse cx="521" cy="689" rx="22" ry="9" transform="rotate(-28 521 689)" fill="#fff" opacity=".7"/>
+  <g fill="#557182" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="3"><text x="48" y="64">MATERIAL EXPERIMENTS</text><text x="48" y="945">06 / CHROME</text><text x="751" y="945" text-anchor="end">LIQUID MATTER</text></g>
+</svg>

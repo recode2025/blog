@@ -1,0 +1,90 @@
+<%- partial('_pre') %>
+<%
+page.comments = false;
+if (!page.robots) page.robots = 'noindex,follow';
+const isTag = !!page.tag || ['tag', 'tags'].includes(page.layout);
+const isDetail = !!(page.category || page.tag);
+const kind = isTag ? 'tags' : 'categories';
+const label = isTag ? '标签' : '分类';
+const directory = isTag ? config.tag_dir : config.category_dir;
+const index = taxonomy_index(kind);
+const current = isDetail && index.terms.find(term =>
+  page.base ? term.path.replace(/\/$/, '') === page.base.replace(/\/$/, '') : term.name === (page.tag || page.category));
+const total = isDetail ? (current ? current.posts.length : page.posts.length) : index.terms.length;
+const latest = site.posts.sort('date', -1).limit(3).toArray();
+%>
+<div id="l_main" class="<%= page.sidebar == false ? 'no_sidebar' : '' %>">
+  <div class="post-wrapper">
+    <article id="<%= isTag ? 'tag' : 'cat' %>" class="post article white-box tf-taxonomy <%= isDetail ? 'tf-taxonomy-detail' : '' %>">
+      <header class="tf-taxonomy-header">
+        <div class="tf-taxonomy-intro">
+          <div class="tf-taxonomy-eyebrow"><span aria-hidden="true"></span><%= isTag ? 'TOPIC INDEX' : 'ARTICLE COLLECTION' %></div>
+          <% if (isDetail) { %>
+            <a class="tf-taxonomy-back" href="<%= url_for(directory + '/') %>"><span aria-hidden="true">←</span> 全部<%= label %></a>
+          <% } %>
+          <h1><%= isDetail ? (page.tag || page.category) : page.title %><span class="tf-taxonomy-period" aria-hidden="true">.</span></h1>
+          <% if (!isDetail && page.content) { %>
+            <div class="tf-taxonomy-description"><%- page.content %></div>
+          <% } else if (isDetail) { %>
+            <p class="tf-taxonomy-description">与这个<%= label %>相关的文章，按时间收录于此。</p>
+          <% } %>
+        </div>
+        <div class="tf-taxonomy-total" aria-label="<%= total %> <%= isDetail ? '篇文章' : '个' + label %>">
+          <strong><%= String(total).padStart(2, '0') %></strong>
+          <span><%= isDetail ? '篇文章' : '个' + label %></span>
+        </div>
+      </header>
+      <nav class="tf-taxonomy-nav" aria-label="文章浏览方式">
+        <div>
+          <a href="<%= url_for(config.category_dir + '/') %>" <%- !isTag ? 'aria-current="' + (isDetail ? 'true' : 'page') + '"' : '' %>><i class="fa-regular fa-folder-open" aria-hidden="true"></i>分类</a>
+          <a href="<%= url_for(config.tag_dir + '/') %>" <%- isTag ? 'aria-current="' + (isDetail ? 'true' : 'page') + '"' : '' %>><span class="tf-hash" aria-hidden="true">#</span>标签</a>
+        </div>
+        <a class="tf-taxonomy-archive" href="<%= url_for(config.archive_dir + '/') %>">全部文章<span aria-hidden="true">↗</span></a>
+      </nav>
+      <% if (!isDetail) { %>
+        <% if (index.terms.length) { %>
+          <div class="tf-taxonomy-section-heading"><h2><%= isTag ? '所有标签' : '主题目录' %></h2><span><%= isTag ? '从一个关键词开始' : '找到感兴趣的方向' %></span></div>
+          <% if (isTag) { %>
+            <ul class="tf-tag-list" aria-label="标签列表">
+              <% index.terms.forEach(term => { %>
+                <li><a href="<%= url_for(term.path) %>"><span class="tf-hash" aria-hidden="true">#</span><span class="tf-term-name"><%= term.name %></span><span class="tf-term-count" aria-label="<%= term.posts.length %> 篇文章"><%= term.posts.length %></span></a></li>
+              <% }); %>
+            </ul>
+          <% } else { %>
+            <div class="tf-category-grid">
+              <% index.roots.forEach((node, position) => { %>
+                <section class="tf-category-card">
+                  <div class="tf-category-topline"><i class="fa-regular fa-folder-open" aria-hidden="true"></i><span aria-hidden="true"><%= String(position + 1).padStart(2, '0') %></span></div>
+                  <h3><a class="tf-category-link" href="<%= url_for(node.term.path) %>"><span class="tf-term-name"><%= node.term.name %></span><span class="tf-term-arrow" aria-hidden="true">↗</span></a></h3>
+                  <p class="tf-category-count"><%= node.term.posts.length %> 篇文章</p>
+                  <% if (node.children.length) { %>
+                    <%- partial('taxonomy-category', { nodes: node.children }) %>
+                  <% } %>
+                </section>
+              <% }); %>
+            </div>
+          <% } %>
+        <% } else { %>
+          <div class="tf-taxonomy-empty">
+            <div class="tf-empty-symbol" aria-hidden="true"><% if (isTag) { %><span>#</span><% } else { %><i class="fa-regular fa-folder-open"></i><% } %><span class="tf-empty-spark"></span></div>
+            <h2><%= isTag ? '等待第一个关键词' : '分类正在整理' %></h2>
+            <p><%= isTag ? '为文章添加标签后，就能在这里循着关键词找到它。' : '文章归类后，会在这里按主题汇集。' %><br>先去看看已经写下的记录吧。</p>
+            <a class="tf-taxonomy-button" href="<%= url_for(config.archive_dir + '/') %>">浏览全部文章<span aria-hidden="true">→</span></a>
+          </div>
+        <% } %>
+        <% if (latest.length) { %>
+          <section class="tf-taxonomy-recent" aria-labelledby="tf-recent-title">
+            <div class="tf-taxonomy-section-heading"><h2 id="tf-recent-title">最近的记录</h2><span><%= site.posts.length %> 篇文章，持续积累</span></div>
+            <ul>
+              <% latest.forEach(post => { %>
+                <li><a href="<%= url_for(post.path) %>"><time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'YYYY.MM.DD') %></time><span class="tf-term-name"><%= post.title %></span><span class="tf-term-arrow" aria-hidden="true">→</span></a></li>
+              <% }); %>
+            </ul>
+          </section>
+        <% } %>
+      <% } %>
+    </article>
+  </div>
+  <% if (isDetail) { %><%- partial('_partial/archive') %><% } %>
+</div>
+<%- partial('_partial/side') %>

@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "bilibili": {
+    "uid": "475363158",
+    "stats": {
+      "data": {
+        "followers": 4177,
+        "following": 333
+      },
+      "status": "ok",
+      "updatedAt": "2026-09-29T09:30:27.970Z",
+      "checkedAt": "2026-09-29T09:30:27.970Z"
+    },
+    "profile": {
+      "data": {
+        "name": "recode2025",
+        "avatar": "https://i0.hdslb.com/bfs/face/6b679e8daaa61ec272eadb3d4cb27a17b4d8235c.jpg"
+      },
+      "source": "bilibili-live-public-profile",
+      "status": "ok",
+      "updatedAt": "2026-09-29T09:30:27.971Z",
+      "checkedAt": "2026-09-29T09:30:27.971Z"
+    },
+    "videos": {
+      "status": "unavailable",
+      "checkedAt": "2026-09-29T09:30:27.971Z",
+      "error": "Bilibili API -352"
+    }
+  },
+  "games": {
+    "starrail": {
+      "data": {
+        "level": 70,
+        "characters": 64,
+        "achievements": 1165
+      },
+      "hiddenFields": [],
+      "nextRefreshAt": "2026-09-29T09:34:04.844Z",
+      "source": "Enka.Network",
+      "status": "ok",
+      "updatedAt": "2026-09-29T09:33:01.261Z",
+      "checkedAt": "2026-09-29T09:33:01.261Z",
+      "uid": "133043327",
+      "provider": "enka",
+      "server": "官服"
+    },
+    "endfield": {
+      "data": {
+        "level": 60,
+        "showcaseCharacters": 4
+      },
+      "hiddenFields": [],
+      "nextRefreshAt": "2026-09-29T09:34:06.431Z",
+      "source": "Enka.Network",
+      "status": "ok",
+      "updatedAt": "2026-09-29T09:33:04.845Z",
+      "checkedAt": "2026-09-29T09:33:04.845Z",
+      "uid": "1823280141",
+      "provider": "enka",
+      "server": "官服"
+    },
+    "zzz": {
+      "data": {
+        "level": 60,
+        "showcaseCharacters": 6
+      },
+      "hiddenFields": [],
+      "nextRefreshAt": "2026-09-29T09:34:07.524Z",
+      "source": "Enka.Network",
+      "status": "ok",
+      "updatedAt": "2026-09-29T09:33:06.431Z",
+      "checkedAt": "2026-09-29T09:33:06.431Z",
+      "uid": "24816656",
+      "provider": "enka",
+      "server": "官服"
+    },
+    "wuthering": {
+      "status": "unavailable",
+      "checkedAt": "2026-09-29T09:36:43.020Z",
+      "error": "Missing WUTHERING_TOKEN",
+      "uid": "116584675",
+      "provider": "wuthering",
+      "server": "官服"
+    }
+  },
+  "github": {
+    "username": "recode2025",
+    "profile": {
+      "data": {
+        "login": "recode2025",
+        "name": "",
+        "avatar": "https://avatars.githubusercontent.com/u/199863676?v=4",
+        "bio": "",
+        "followers": 1,
+        "following": 4,
+        "publicRepos": 21,
+        "url": "https://github.com/recode2025"
+      },
+      "status": "ok",
+      "updatedAt": "2026-09-29T09:50:47.236Z",
+      "checkedAt": "2026-09-29T09:50:47.236Z"
+    },
+    "repositories": {
+      "data": [
+        {
+          "name": "recode2025",
+          "fullName": "recode2025/recode2025",
+          "url": "https://github.com/recode2025/recode2025",
+          "description": "README",
+          "language": "",
+          "stars": 0,
+          "forks": 0,
+          "pushedAt": "2026-09-29T09:18:00.000Z"
+        },
+        {
+          "name": "zongce-gs",
+          "fullName": "recode2025/zongce-gs",
+          "url": "https://github.com/recode2025/zongce-gs",
+          "description": "",
+          "language": "JavaScript",
+          "stars": 0,
+          "forks": 0,
+          "pushedAt": "2026-09-17T10:36:09.000Z"
+        },
+        {
+          "name": "zongce",
+          "fullName": "recode2025/zongce",
+          "url": "https://github.com/recode2025/zongce",
+          "description": "",
+          "language": "TypeScript",
+          "stars": 0,
+          "forks": 0,
+          "pushedAt": "2026-09-16T11:49:59.000Z"
+        }
+      ],
+      "status": "ok",
+      "updatedAt": "2026-09-29T09:50:48.273Z",
+      "checkedAt": "2026-09-29T09:50:48.273Z"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+# Public About-page settings. Never put cookies, tokens, or passwords here.
+# Run `node tools/refresh-about.mjs` to refresh public data before building.
+github:
+  username: recode2025
+  repository_limit: 3
+
+bilibili:
+  uid: '475363158'
+  video_limit: 6
+  # Optional, publicly shareable fallback videos. See docs/about-data.md.
+  videos: []
+
+games:
+  - id: starrail
+    title: 崩坏：星穹铁道
+    english: 'Honkai: Star Rail'
+    image: /assets/about/games/starrail.webp
+    url: https://sr.mihoyo.com/
+    server: 官服
+    uid: '133043327'
+    provider: enka
+    stats:
+      level: null
+      characters: null
+      achievements: null
+  - id: endfield
+    title: 明日方舟：终末地
+    english: 'Arknights: Endfield'
+    image: /assets/about/games/endfield.webp
+    url: https://endfield.hypergryph.com/
+    server: 官服
+    uid: '1823280141'
+    provider: enka
+    stats:
+      level: null
+      characters: null
+      achievements: null
+  - id: zzz
+    title: 绝区零
+    english: Zenless Zone Zero
+    image: /assets/about/games/zzz.webp
+    url: https://zzz.mihoyo.com/
+    server: 官服
+    uid: '24816656'
+    provider: enka
+    stats:
+      level: null
+      characters: null
+      achievements: null
+  - id: wuthering
+    title: 鸣潮
+    english: Wuthering Waves
+    image: /assets/about/games/wuthering.webp
+    url: https://mc.kurogames.com/
+    server: 官服
+    uid: '116584675'
+    provider: wuthering
+    stats:
+      level: null
+      characters: null
+      achievements: null

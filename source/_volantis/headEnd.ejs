@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="<%- url_for('/css/tephrofos.css') %>">
+<% if (page.layout === 'post') { %>
+<style>
+/* Keep global navigation from first paint; article visibility uses native always. */
+#l_header #wrapper .nav-main, #l_header #wrapper.sub .nav-main { transform: none; }
+#l_header #wrapper .nav-sub { display: none; }
+</style>
+<% } %>
+<% if (page.about) { %>
+<link rel="stylesheet" href="<%- url_for('/css/about.css') %>">
+<% } %>
+<% if (page.gallery) { %>
+<link rel="stylesheet" href="<%- url_for('/css/gallery.css') %>">
+<% } %>
+<% if (['category', 'categories', 'tag', 'tags'].includes(page.layout) || is_category() || is_tag()) { %>
+<link rel="stylesheet" href="<%- url_for('/css/taxonomy.css') %>">
+<% } %>
+<% if (is_home() && !page.prev) { %>
+<link rel="preload" as="image" href="<%- url_for(theme.cover.background) %>">
+<link rel="preload" as="font" type="font/woff2" href="<%- url_for('/vendor/space-grotesk/space-grotesk.woff2') %>" crossorigin>
+<% } %>
+<meta name="theme-color" content="#f5f4f8">
+<% if (theme.plugins.darkmode.enable) { %>
+<script src="<%- url_for('/js/time-theme.js') %>"></script>
+<% } %>

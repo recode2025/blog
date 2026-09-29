@@ -1,0 +1,52 @@
+---
+layout: page
+title: 3D 作品
+description: recode 的 3D 作品展厅。移动鼠标探索空间，浏览建模、生成艺术与视觉设计作品。
+date: 2026-09-29 00:00:00
+gallery: true
+cover: false
+sidebar: false
+title_display: false
+top_meta: false
+bottom_meta: false
+comments: false
+toc: false
+---
+  <main class="portfolio-gallery">
+    <a class="skip-link" href="#works">跳至作品</a>
+    <section class="gallery-intro" aria-labelledby="gallery-title">
+      <div><p class="eyebrow"><span></span> AN EXPLORATION OF FORM &amp; CODE</p><h1 id="gallery-title">想象，不止一面<span class="title-dot">.</span></h1><p class="intro-copy">一些关于图形、代码与创造的探索。<span>换个角度，看看我的作品。</span></p></div>
+      <div class="exhibition-note"><span class="note-number">01 — ∞</span><span>持续探索中的个人展厅</span><span class="sample-note" hidden>当前展出为可替换的示例作品</span></div>
+    </section>
+    <section class="gallery-collection" aria-label="作品展厅">
+      <div class="gallery-toolbar">
+        <div class="filters" role="group" aria-label="按作品类型筛选" hidden>
+          <button class="is-active" type="button" data-filter="all" aria-pressed="true">全部作品 <span data-total>{% portfolio_count %}</span></button>
+          <button type="button" data-filter="3D" aria-pressed="false">3D / 空间</button>
+          <button type="button" data-filter="Generative" aria-pressed="false">生成艺术</button>
+          <button type="button" data-filter="Design" aria-pressed="false">视觉设计</button>
+        </div>
+        <span class="collection-label">SELECTED WORKS</span>
+        <div class="view-switch" role="group" aria-label="切换浏览方式" hidden>
+          <button type="button" data-view="space" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2 7 4v8l-7 4-7-4V6Z M3 6l7 4 7-4 M10 10v8"/></svg>空间</button>
+          <button type="button" data-view="grid" aria-pressed="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h5v5H3z M12 3h5v5h-5z M3 12h5v5H3z M12 12h5v5h-5z"/></svg>网格</button>
+        </div>
+      </div>
+      <div class="gallery-stage" hidden>
+        <div class="stage-label" aria-hidden="true"><span class="live-dot"></span> THE EXHIBITION <span class="stage-line"></span> VOL. 001</div>
+        <canvas id="gallery-canvas" tabindex="0" aria-label="3D 作品展厅。移动鼠标改变视角，拖动浏览，滚轮缩放。左右方向键选择作品，回车查看，Home 重置。也可切换网格浏览。"></canvas>
+        <div class="stage-caption" aria-hidden="true"><span data-hover-number>01</span><div><strong data-hover-title>Orbit</strong><span data-hover-category>3D / 空间</span></div><span class="caption-arrow">↗</span></div>
+        <div class="stage-corner" aria-hidden="true">A DIFFERENT<br>POINT OF VIEW.</div>
+        <div class="stage-controls"><button type="button" data-zoom="in" aria-label="拉近视角" title="拉近视角">+</button><button type="button" data-zoom="out" aria-label="拉远视角" title="拉远视角">−</button><span></span><button type="button" data-reset aria-label="重置视角" title="重置视角">↺</button></div>
+        <div class="stage-help"><svg viewBox="0 0 18 22" aria-hidden="true"><rect x="3" y="1" width="12" height="19" rx="6"/><path d="M9 5v4"/></svg><span>移动鼠标探索视角<span class="help-separator">·</span>拖动浏览<span class="help-desktop"><span class="help-separator">·</span>滚轮缩放</span></span></div>
+      </div>
+      <div id="works" class="works-grid">{% portfolio_gallery %}</div>
+      <p class="gallery-status" role="status" aria-live="polite"></p>
+      <div class="collection-footer"><span><span class="live-dot"></span> <span data-count>{% portfolio_count %}</span> 件作品 <span class="footer-dot">/</span> 不断生长的灵感</span><span class="footer-instruction">点击作品，走近一点 <span aria-hidden="true">↗</span></span></div>
+    </section>
+  <dialog class="work-dialog portfolio-dialog" aria-labelledby="detail-title">
+    <button class="dialog-close" type="button" aria-label="关闭作品详情">×</button>
+    <div class="detail-art"><img alt="" width="800" height="1000"></div>
+    <div class="detail-info"><p class="eyebrow" data-detail-category></p><h2 id="detail-title"></h2><p class="detail-subtitle"></p><div class="detail-description"></div><div class="detail-bottom"><span class="detail-demo"></span><div><button type="button" data-detail-prev aria-label="上一件作品">←</button><span data-detail-index></span><button type="button" data-detail-next aria-label="下一件作品">→</button></div></div></div>
+  </dialog>
+  </main>
