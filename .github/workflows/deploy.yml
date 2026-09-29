@@ -1,0 +1,81 @@
+name: Build blog site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# The workflow writes the generated site branch. The server pulls it daily.
+permissions:
+  contents: write
+
+concurrency:
+  group: blog-site-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out the site and theme
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+          persist-credentials: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Install pnpm
+        run: npm install --global pnpm@12.4.2
+
+      - name: Install project dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check the deployment scripts
+        run: node --test tools/deploy.test.mjs tools/pull.test.mjs
+
+      - name: Build the static site
+        run: pnpm run build
+
+      - name: Publish static files to the site branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          for page in index.html 404.html search.json atom.xml sitemap.xml robots.txt; do
+            test -s "public/$page"
+          done
+          if [[ -n "$(find public -type l -print -quit)" ]]; then
+            printf 'Refusing to publish symlinks in public/.\n' >&2
+            exit 1
+          fi
+
+          # A separate index preserves the main checkout and its theme submodule.
+          previous=''
+          remote_site=$(git ls-remote --heads origin refs/heads/site)
+          if [[ -n "$remote_site" ]]; then
+            git fetch --no-tags origin refs/heads/site:refs/remotes/origin/site
+            previous=$(git rev-parse refs/remotes/origin/site)
+          fi
+          export GIT_INDEX_FILE="$RUNNER_TEMP/blog-site.index"
+          git read-tree --empty
+          git --work-tree="$GITHUB_WORKSPACE/public" add --all
+          tree=$(git write-tree)
+          if [[ -n "$previous" && "$tree" == "$(git rev-parse "$previous^{tree}")" ]]; then
+            printf 'Static files are unchanged; the site branch is already current.\n'
+            exit 0
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if [[ -n "$previous" ]]; then
+            commit=$(git commit-tree "$tree" -p "$previous" -m "Build site from $GITHUB_SHA")
+          else
+            commit=$(git commit-tree "$tree" -m "Build site from $GITHUB_SHA")
+          fi
+          # Normal push preserves history and refuses divergent changes.
+          git push origin "$commit:refs/heads/site"
