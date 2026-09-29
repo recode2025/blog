@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x2=".6" y2="1"><stop stop-color="#f3f1e9"/><stop offset="1" stop-color="#dcded4"/></linearGradient>
+    <linearGradient id="sphere" x1=".1" y1=".1" x2=".9" y2="1"><stop stop-color="#80c8b3"/><stop offset=".5" stop-color="#3c968d"/><stop offset="1" stop-color="#205958"/></linearGradient>
+    <radialGradient id="glow" cx=".28" cy=".2" r=".8"><stop stop-color="#b2e1c4" stop-opacity=".7"/><stop offset="1" stop-color="#2b7a79" stop-opacity="0"/></radialGradient>
+    <linearGradient id="slab" x2=".7" y2="1"><stop stop-color="#2a646b"/><stop offset="1" stop-color="#123c49"/></linearGradient>
+    <linearGradient id="arch" x2="1" y2=".5"><stop stop-color="#b7c9bd"/><stop offset=".5" stop-color="#edf2e7"/><stop offset="1" stop-color="#9ab2a4"/></linearGradient>
+    <filter id="shadow" x="-50%" y="-150%" width="200%" height="400%"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h800v1000H0z"/>
+  <ellipse cx="420" cy="819" rx="245" ry="23" fill="#355747" opacity=".2" filter="url(#shadow)"/>
+  <path d="M325 801V657a98 98 0 0 1 196 0v144h-55V659a43 43 0 0 0-86 0v142Z" fill="#798f87"/>
+  <path d="M305 784V640a98 98 0 0 1 196 0v144h-55V642a43 43 0 0 0-86 0v142Z" fill="url(#arch)"/>
+  <path d="m161 531 492-58 19 26-492 58Z" fill="#102f38"/>
+  <path d="m161 514 492-58v17l-492 58Z" fill="url(#slab)"/>
+  <path d="m161 514 26-17 492-57-26 16Z" fill="#55938e"/>
+  <circle cx="339" cy="359" r="139" fill="url(#sphere)"/>
+  <circle cx="339" cy="359" r="139" fill="url(#glow)"/>
+  <circle cx="604" cy="421" r="43" fill="#d69158"/>
+  <path d="M574 397a40 40 0 0 1 57 1" fill="none" stroke="#f0bd81" stroke-width="1.5"/>
+  <g fill="#577068" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="3"><text x="48" y="64">SPATIAL EXERCISES</text><text x="48" y="945">04 / BALANCE</text><text x="751" y="945" text-anchor="end">EQUILIBRIUM</text></g>
+</svg>

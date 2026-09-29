@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e2dcf1"/><stop offset="1" stop-color="#bdb2d6"/></linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#f2d4ff"/><stop offset=".24" stop-color="#b881ef"/><stop offset=".48" stop-color="#7745b4"/><stop offset=".69" stop-color="#39265e"/><stop offset=".84" stop-color="#8961b6"/><stop offset="1" stop-color="#d1a4ee"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fff" stop-opacity=".7"/><stop offset=".4" stop-color="#a986c5" stop-opacity="0"/><stop offset="1" stop-color="#281946" stop-opacity=".65"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#f8edff" stop-opacity=".85"/><stop offset="1" stop-color="#ece0ff" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-70%" y="-200%" width="240%" height="500%"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h800v1000H0z"/>
+  <ellipse cx="218" cy="200" rx="520" ry="570" fill="url(#light)"/>
+  <path d="M0 770H800" stroke="#a99cbd" stroke-opacity=".25"/>
+  <ellipse cx="419" cy="785" rx="218" ry="32" fill="#463151" opacity=".3" filter="url(#shadow)"/>
+  <g transform="translate(398 453) rotate(-30)">
+    <ellipse rx="202" ry="270" fill="none" stroke="#402653" stroke-width="116" transform="translate(10 13)"/>
+    <ellipse rx="202" ry="270" fill="none" stroke="url(#ring)" stroke-width="112"/>
+    <ellipse rx="254" ry="322" fill="none" stroke="url(#edge)" stroke-width="3"/>
+    <ellipse rx="149" ry="217" fill="none" stroke="#e8bbff" stroke-opacity=".4" stroke-width="2"/>
+    <path d="M-166-230C-93-322 49-323 134-246" fill="none" stroke="#f9deff" stroke-opacity=".5" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g fill="#57486a" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="3"><text x="48" y="64">OBJECT STUDIES</text><text x="48" y="945">01 / ORBIT</text><text x="751" y="945" text-anchor="end">VOLUME I</text></g>
+</svg>

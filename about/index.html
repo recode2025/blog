@@ -1,0 +1,3996 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#6.8.3'>
+  <meta name="generator" content="Hexo 8.1.2">
+  <meta name="Volantis" content="6.8.3">
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://www.recode88.cn/about/"/>
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https://giscus.app https://*.bilibili.com https://*.youtube.com https://*.163.com; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <!-- import head_begin begin -->
+  <!-- import head_begin end -->
+  <!-- Custom Files headBegin begin-->
+  
+  <!-- Custom Files headBegin end-->
+    <link rel="shortcut icon" type='image/x-icon' href="/assets/tephrofos/favicon.svg">
+  <link rel="preload" href="/css/style.css" as="style">
+  
+  <!-- feed -->
+  <!-- 页面元数据 -->
+  <title>关于 Pixel &amp; Pointer - Pixel &amp; Pointer</title>
+  <meta name="keywords" content="计算机图形学,Computer Graphics,C++,Python,ACM,算法,数据结构,408,考研408,3D建模,Blender,Houdini,Unity,动画,角色动画,Rendering,Shader,OpenGL,IELTS,雅思,编程,技术博客,学习笔记">
+  <meta desc name="description" content="recode 的个人技术博客，记录代码、图形与算法的学习。 - recode - Pixel &amp; Pointer">
+  
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于 Pixel &amp; Pointer">
+<meta property="og:url" content="https://www.recode88.cn/about/">
+<meta property="og:site_name" content="Pixel &amp; Pointer">
+<meta property="og:description" content="recode 的个人技术博客，记录代码、图形与算法的学习。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.recode88.cn/assets/tephrofos/avatar.webp">
+<meta property="article:published_time" content="2026-09-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-09-29T12:04:35.179Z">
+<meta property="article:author" content="recode">
+<meta property="article:tag" content="3D建模">
+<meta property="article:tag" content="408">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="Blender">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="Computer Graphics">
+<meta property="article:tag" content="Houdini">
+<meta property="article:tag" content="IELTS">
+<meta property="article:tag" content="OpenGL">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Rendering">
+<meta property="article:tag" content="Shader">
+<meta property="article:tag" content="Unity">
+<meta property="article:tag" content="动画">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="技术博客">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="考研408">
+<meta property="article:tag" content="角色动画">
+<meta property="article:tag" content="计算机图形学">
+<meta property="article:tag" content="雅思">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.recode88.cn/assets/tephrofos/avatar.webp">
+  <style>
+    /* 首屏样式 */
+    #safearea {
+  display: none;
+}
+:root {
+  --blur-px: 12px;
+  --blur-bg: var(--bg-a50);
+  --blur-sat: 300%;
+}
+:root {
+  --hue: 260.5882352941176deg;
+  --sat: 43.22033898305086%;
+  --light: 53.72549019607844%;
+  --alpha: 1;
+  --theme: hsla(var(--hue) var(--sat) var(--light) / 1);
+  --theme-a10: hsla(var(--hue) var(--sat) var(--light) / 0.1);
+  --theme-a20: hsla(var(--hue) var(--sat) var(--light) / 0.2);
+  --theme-a30: hsla(var(--hue) var(--sat) var(--light) / 0.3);
+  --theme-a50: hsla(var(--hue) var(--sat) var(--light) / 0.5);
+  --theme-a90: hsla(var(--hue) var(--sat) var(--light) / 0.9);
+  --accent: #c03d72;
+  --link: hsla(266.06060606060606deg 41.77215189873418% 46.470588235294116% / 1);
+  --link-a20: hsla(266.06060606060606deg 41.77215189873418% 46.470588235294116% / 0.2);
+  --background: hsla(210deg 20% 98% / 1);
+  --card: #fff;
+  --bg-a20: hsla(210deg 0% 100% / 0.2);
+  --bg-a50: hsla(210deg 0% 100% / 0.5);
+  --bg-a60: hsla(210deg 0% 100% / 0.6);
+  --bg-a75: hsla(210deg 0% 100% / 0.75);
+  --bg-a100: hsla(210deg 0% 100% / 1);
+  --text: hsla(210deg 0% 0% / 1);
+  --text-reverse: hsla(210deg 0% 100% / 1);
+  --text-p1: hsla(210deg 0% 0% / 0.8);
+  --text-p2: hsla(210deg 0% 0% / 0.7);
+  --text-p3: hsla(210deg 0% 0% / 0.5);
+  --text-p4: hsla(210deg 0% 0% / 0.4);
+  --text-meta: hsla(210deg 0% 0% / 0.2);
+  --text-code: hsla(210deg 0% 0% / 0.9);
+  --text-a10: hsla(210deg 0% 0% / 0.1);
+  --text-a20: hsla(210deg 0% 0% / 0.2);
+  --block: hsla(210deg 50% 12% / 0.04);
+  --block-border: hsla(210deg 50% 12% / 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: hsla(210deg 8% 12% / 1);
+    --card: hsla(210deg 10% 24% / 1);
+    --bg-a20: hsla(210deg 0% 0% / 0.2);
+    --bg-a50: hsla(210deg 0% 0% / 0.5);
+    --bg-a60: hsla(210deg 0% 0% / 0.6);
+    --bg-a75: hsla(210deg 0% 0% / 0.75);
+    --bg-a100: hsla(210deg 0% 0% / 1);
+    --text: hsla(210deg 0% 100% / 1);
+    --text-reverse: hsla(210deg 0% 0% / 1);
+    --text-p1: hsla(210deg 0% 100% / 0.8);
+    --text-p2: hsla(210deg 0% 100% / 0.7);
+    --text-p3: hsla(210deg 0% 100% / 0.5);
+    --text-p4: hsla(210deg 0% 100% / 0.4);
+    --text-meta: hsla(210deg 0% 100% / 0.2);
+    --text-code: hsla(210deg 0% 100% / 0.9);
+    --text-a10: hsla(210deg 0% 100% / 0.1);
+    --text-a20: hsla(210deg 0% 100% / 0.2);
+    --block: hsla(210deg 24% 72% / 0.08);
+    --block-border: hsla(210deg 24% 72% / 0.12);
+    --text-code: hsla(20 75 60 / 1);
+  }
+}
+@media screen and (prefers-color-scheme: dark) and (max-width: 667px) {
+  :root {
+    --background: #000;
+  }
+}
+:root[color-scheme="light"] {
+  --background: hsla(210deg 20% 98% / 1);
+  --card: #fff;
+  --bg-a20: hsla(210deg 0% 100% / 0.2);
+  --bg-a50: hsla(210deg 0% 100% / 0.5);
+  --bg-a60: hsla(210deg 0% 100% / 0.6);
+  --bg-a75: hsla(210deg 0% 100% / 0.75);
+  --bg-a100: hsla(210deg 0% 100% / 1);
+  --text: hsla(210deg 0% 0% / 1);
+  --text-reverse: hsla(210deg 0% 100% / 1);
+  --text-p1: hsla(210deg 0% 0% / 0.8);
+  --text-p2: hsla(210deg 0% 0% / 0.7);
+  --text-p3: hsla(210deg 0% 0% / 0.5);
+  --text-p4: hsla(210deg 0% 0% / 0.4);
+  --text-meta: hsla(210deg 0% 0% / 0.2);
+  --text-code: hsla(210deg 0% 0% / 0.9);
+  --text-a10: hsla(210deg 0% 0% / 0.1);
+  --text-a20: hsla(210deg 0% 0% / 0.2);
+  --block: hsla(210deg 50% 12% / 0.04);
+  --block-border: hsla(210deg 50% 12% / 0.06);
+}
+:root[color-scheme="dark"] {
+  --background: hsla(210deg 8% 12% / 1);
+  --card: hsla(210deg 10% 24% / 1);
+  --bg-a20: hsla(210deg 0% 0% / 0.2);
+  --bg-a50: hsla(210deg 0% 0% / 0.5);
+  --bg-a60: hsla(210deg 0% 0% / 0.6);
+  --bg-a75: hsla(210deg 0% 0% / 0.75);
+  --bg-a100: hsla(210deg 0% 0% / 1);
+  --text: hsla(210deg 0% 100% / 1);
+  --text-reverse: hsla(210deg 0% 0% / 1);
+  --text-p1: hsla(210deg 0% 100% / 0.8);
+  --text-p2: hsla(210deg 0% 100% / 0.7);
+  --text-p3: hsla(210deg 0% 100% / 0.5);
+  --text-p4: hsla(210deg 0% 100% / 0.4);
+  --text-meta: hsla(210deg 0% 100% / 0.2);
+  --text-code: hsla(210deg 0% 100% / 0.9);
+  --text-a10: hsla(210deg 0% 100% / 0.1);
+  --text-a20: hsla(210deg 0% 100% / 0.2);
+  --block: hsla(210deg 24% 72% / 0.08);
+  --block-border: hsla(210deg 24% 72% / 0.12);
+  --text-code: hsla(20 75 60 / 1);
+}
+@media screen and (max-width: 667px) {
+  :root[color-scheme="dark"] {
+    --background: #000;
+  }
+}
+:root {
+  --color-site-body: #f5f4f8;
+  --color-site-bg: #f5f4f8;
+  --color-site-inner: #242330;
+  --color-site-footer: #686572;
+  --color-card: #fff;
+  --color-text: #302d3b;
+  --color-block: #f3f0f7;
+  --color-inlinecode: #a23869;
+  --color-codeblock: #f3f0f7;
+  --color-h1: #242330;
+  --color-h2: #242330;
+  --color-h3: #302d3b;
+  --color-h4: #302d3b;
+  --color-h5: #45404f;
+  --color-h6: #686572;
+  --color-p: #45404f;
+  --color-list: #686572;
+  --color-list-hl: #604496;
+  --color-meta: #777080;
+  --color-read-bkg: #e0d8c8;
+  --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f3f0f7;
+  --link-color: #00323c;
+  --color-text-a10: rgba(48,45,59,0.1);
+  --color-text-a50: rgba(48,45,59,0.5);
+  --color-text-a60: rgba(48,45,59,0.6);
+  --color-text-a70: rgba(48,45,59,0.7);
+  --color-text-a80: rgba(48,45,59,0.8);
+  --color-text-a85: rgba(48,45,59,0.85);
+  --color-text-a90: rgba(48,45,59,0.9);
+  --color-card-a50: rgba(255,255,255,0.5);
+  --color-card-a60: rgba(255,255,255,0.6);
+  --color-card-a70: rgba(255,255,255,0.7);
+  --color-card-a80: rgba(255,255,255,0.8);
+  --color-card-a90: rgba(255,255,255,0.9);
+  --color-card-darken2: #fafafa;
+  --color-card-lighten5: #fff;
+  --color-p-a20: rgba(69,64,79,0.2);
+  --color-p-a70: rgba(69,64,79,0.7);
+  --color-p-a75: rgba(69,64,79,0.75);
+  --color-block-lighten3: #fbfafc;
+  --color-block-darken2: #eee9f3;
+  --color-mix60-p-card: #8f8c95;
+  --color-codeblock-darken6: #e3dcec;
+  --color-mix75-theme-text: #664b9b;
+  --color-mix90-block-text: #dfdce4;
+}
+:root {
+  text-autospace: normal;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+*::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--theme);
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+html {
+  color: var(--color-text);
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif, Menlo, Monaco, monospace, sans-serif;
+  font-size: 16px;
+}
+html >::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+html >::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+html >::-webkit-scrollbar-thumb {
+  background: var(--theme);
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+html >::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+body {
+  background-color: var(--color-site-body);
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body.modal-active {
+  overflow: hidden;
+}
+@media screen and (max-width: 680px) {
+  body.modal-active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+a {
+  color: var(--link);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+a:hover {
+  color: var(--accent);
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+ul,
+ol {
+  padding-left: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+header {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+img {
+  border: 0;
+  background: none;
+  max-width: 100%;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-bottom: 1px solid rgba(48,45,59,0.1);
+}
+button,
+input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  background: none;
+  border: none;
+}
+button {
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur {
+    background: var(--color-card-a90) !important;
+    backdrop-filter: saturate(200%) blur(20px);
+  }
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur#comments {
+    backdrop-filter: unset;
+  }
+}
+#layoutHelper-comments {
+  margin-bottom: 100px;
+}
+.shadow {
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.shadow.floatable {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.shadow.floatable:hover {
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+}
+#l_cover {
+  min-height: 64px;
+}
+.cover-wrapper {
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  color: var(--color-site-inner);
+  padding: 0 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -100px;
+}
+.cover-wrapper .cover-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+.cover-wrapper .cover-bg.lazyload:not(.loaded) {
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+}
+.cover-wrapper .cover-bg.lazyload.loaded {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.cover-wrapper .cover-body {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.cover-wrapper#full {
+  height: calc(100vh + 100px);
+  padding-bottom: 100px;
+}
+.cover-wrapper#half {
+  max-height: 640px;
+  min-height: 400px;
+  height: calc(36vh - 64px + 200px);
+}
+.cover-wrapper #scroll-down {
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.cover-wrapper #scroll-down .scroll-down-effects {
+  color: #fff;
+  font-size: 24px;
+  line-height: 64px;
+  position: absolute;
+  width: 24px;
+  left: calc(50% - 12px);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  animation: scroll-down-effect 1.5s infinite;
+  -webkit-animation: scroll-down-effect 1.5s infinite;
+  -khtml-animation: scroll-down-effect 1.5s infinite;
+  -moz-animation: scroll-down-effect 1.5s infinite;
+  -o-animation: scroll-down-effect 1.5s infinite;
+  -ms-animation: scroll-down-effect 1.5s infinite;
+}
+@-moz-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.cover-wrapper .cover-body {
+  margin-top: 64px;
+  margin-bottom: 100px;
+}
+.cover-wrapper .cover-body,
+.cover-wrapper .cover-body .top,
+.cover-wrapper .cover-body .bottom {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  max-width: 100%;
+}
+.cover-wrapper .cover-body .bottom {
+  margin-top: 32px;
+}
+.cover-wrapper .cover-body .title {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif, Helvetica, monospace;
+  font-size: 3.125rem;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.cover-wrapper .cover-body .subtitle {
+  font-size: 20px;
+}
+.cover-wrapper .cover-body .logo {
+  max-height: 120px;
+  max-width: calc(100% - 4 * 16px);
+}
+@media screen and (min-height: 1024px) {
+  .cover-wrapper .cover-body .title {
+    font-size: 3rem;
+  }
+  .cover-wrapper .cover-body .subtitle {
+    font-size: 0.975rem;
+  }
+  .cover-wrapper .cover-body .logo {
+    max-height: 150px;
+  }
+}
+.cover-wrapper .cover-body .m_search {
+  position: relative;
+  max-width: calc(100% - 16px);
+  width: 320px;
+  vertical-align: middle;
+}
+.cover-wrapper .cover-body .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  width: 100%;
+}
+.cover-wrapper .cover-body .m_search .icon,
+.cover-wrapper .cover-body .m_search .input {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.cover-wrapper .cover-body .m_search .icon {
+  position: absolute;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  line-height: 2.5rem;
+  width: 32px;
+  top: 0;
+  left: 5px;
+  color: var(--color-p-a75);
+}
+.cover-wrapper .cover-body .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 0.8125rem;
+  -webkit-appearance: none;
+  padding-left: 36px;
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  background: var(--color-card-a60);
+  backdrop-filter: blur(10px);
+  border: none;
+  color: var(--color-text);
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .cover-body .m_search .input {
+    padding-left: 36px;
+  }
+}
+.cover-wrapper .cover-body .m_search .input:hover {
+  background: var(--color-card-a80);
+}
+.cover-wrapper .cover-body .m_search .input:focus {
+  background: var(--color-card);
+}
+.cover-wrapper .list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -khtml-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  align-items: stretch;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.cover-wrapper .list-h a {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  font-weight: 600;
+}
+.cover-wrapper .list-h a img {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  margin: 4px;
+  min-width: 40px;
+  max-width: 44px;
+}
+@media screen and (max-width: 768px) {
+  .cover-wrapper .list-h a img {
+    min-width: 36px;
+    max-width: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .list-h a img {
+    margin: 2px 4px;
+    min-width: 32px;
+    max-width: 36px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cover-wrapper .list-h a img {
+    min-width: 28px;
+    max-width: 32px;
+  }
+}
+.cover-wrapper {
+  max-width: 100%;
+}
+.cover-wrapper.search .bottom .menu {
+  margin-top: 16px;
+}
+.cover-wrapper.search .bottom .menu .list-h a {
+  white-space: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 2px;
+  margin: 4px;
+  color: var(--color-site-inner);
+  opacity: 0.75;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border-bottom: 2px solid transparent;
+}
+.cover-wrapper.search .bottom .menu .list-h a i {
+  margin-right: 4px;
+}
+.cover-wrapper.search .bottom .menu .list-h a p {
+  font-size: 0.9375rem;
+}
+.cover-wrapper.search .bottom .menu .list-h a:hover,
+.cover-wrapper.search .bottom .menu .list-h a.active,
+.cover-wrapper.search .bottom .menu .list-h a:active {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper.dock .menu,
+.cover-wrapper.featured .menu,
+.cover-wrapper.focus .menu {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.cover-wrapper.dock .menu .list-h a,
+.cover-wrapper.featured .menu .list-h a,
+.cover-wrapper.focus .menu .list-h a {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  line-height: 24px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-bottom: none;
+  text-align: center;
+  align-content: flex-end;
+  color: var(--color-text-a70);
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper.dock .menu .list-h a,
+  .cover-wrapper.featured .menu .list-h a,
+  .cover-wrapper.focus .menu .list-h a {
+    padding: 12px 8px;
+  }
+}
+.cover-wrapper.dock .menu .list-h a i,
+.cover-wrapper.featured .menu .list-h a i,
+.cover-wrapper.focus .menu .list-h a i {
+  margin: 8px;
+}
+.cover-wrapper.dock .menu .list-h a p,
+.cover-wrapper.featured .menu .list-h a p,
+.cover-wrapper.focus .menu .list-h a p {
+  font-size: 0.8125rem;
+}
+.cover-wrapper.dock .menu .list-h a.active,
+.cover-wrapper.featured .menu .list-h a.active,
+.cover-wrapper.focus .menu .list-h a.active {
+  background: var(--color-card);
+  backdrop-filter: none;
+}
+.cover-wrapper.dock .menu .list-h a.active i,
+.cover-wrapper.featured .menu .list-h a.active i,
+.cover-wrapper.focus .menu .list-h a.active i,
+.cover-wrapper.dock .menu .list-h a.active i+p,
+.cover-wrapper.featured .menu .list-h a.active i+p,
+.cover-wrapper.focus .menu .list-h a.active i+p {
+  color: var(--theme);
+}
+.cover-wrapper.dock .menu .list-h a.active img+p,
+.cover-wrapper.featured .menu .list-h a.active img+p,
+.cover-wrapper.focus .menu .list-h a.active img+p {
+  color: var(--color-text);
+}
+.cover-wrapper.dock .menu .list-h a:hover,
+.cover-wrapper.featured .menu .list-h a:hover,
+.cover-wrapper.focus .menu .list-h a:hover {
+  background: var(--color-card);
+}
+.cover-wrapper.dock .top {
+  margin-bottom: 48px;
+}
+.cover-wrapper.dock .menu {
+  background: var(--color-card-a50);
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+}
+.cover-wrapper.dock .menu .list-h {
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  margin: 4px;
+}
+.cover-wrapper.dock .menu .list-h a+a {
+  margin-left: 4px;
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper.dock .menu .list-h {
+    overflow-x: scroll;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
+    background: var(--theme);
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+  }
+}
+@supports (backdrop-filter: blur(20px)) {
+  .cover-wrapper.dock .menu {
+    background: var(--color-card-a50);
+    backdrop-filter: saturate(200%) blur(20px);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --color-site-body: #121118;
+    --color-read-bkg: #16151e;
+    --color-read-post: #201e2b;
+    --color-site-bg: #16151e;
+    --color-site-inner: #f0edf7;
+    --color-site-footer: #a49bad;
+    --color-card: #201e2b;
+    --color-text: #e5dfed;
+    --color-block: #2a2636;
+    --color-codeblock: #191722;
+    --color-inlinecode: #e897bc;
+    --color-h1: #f0edf7;
+    --color-h2: #f0edf7;
+    --color-h3: #e5dfed;
+    --color-h4: #e5dfed;
+    --color-h5: #ccc3d5;
+    --color-h6: #afa4bb;
+    --color-p: #ccc3d5;
+    --color-list: #afa4bb;
+    --color-list-hl: #9377c9;
+    --color-meta: #a49bad;
+    --color-link: #a49bad;
+    --color-copyright-bkg: #292534;
+    --link-color: #e4e4e4;
+    --color-text-a10: rgba(229,223,237,0.1);
+    --color-text-a50: rgba(229,223,237,0.5);
+    --color-text-a60: rgba(229,223,237,0.6);
+    --color-text-a70: rgba(229,223,237,0.7);
+    --color-text-a80: rgba(229,223,237,0.8);
+    --color-text-a85: rgba(229,223,237,0.85);
+    --color-text-a90: rgba(229,223,237,0.9);
+    --color-card-a50: rgba(32,30,43,0.5);
+    --color-card-a60: rgba(32,30,43,0.6);
+    --color-card-a70: rgba(32,30,43,0.7);
+    --color-card-a80: rgba(32,30,43,0.8);
+    --color-card-a90: rgba(32,30,43,0.9);
+    --color-card-darken2: #1c1a25;
+    --color-card-lighten5: #2b283a;
+    --color-p-a20: rgba(204,195,213,0.2);
+    --color-p-a70: rgba(204,195,213,0.7);
+    --color-p-a75: rgba(204,195,213,0.75);
+    --color-block-lighten3: #312c3f;
+    --color-block-darken2: #252230;
+    --color-mix60-p-card: #878191;
+    --color-codeblock-darken6: #0c0b10;
+    --color-mix75-theme-text: #9478c8;
+    --color-mix90-block-text: #3c3848;
+  }
+  :root:not([color-scheme]) img {
+    filter: brightness(95%) !important;
+  }
+  :root:not([color-scheme]) .blur {
+    background: rgba(22,21,30,0.9) !important;
+  }
+  :root:not([color-scheme]) .white-box.blur {
+    background: rgba(32,30,43,0.9) !important;
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) .article blockquote {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .article-title a {
+    color: var(--color-h1) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal,
+  :root:not([color-scheme]) #u-search .modal-header,
+  :root:not([color-scheme]) #u-search .modal-body {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:focus {
+    background: var(--color-site-body) !important;
+  }
+}
+[color-scheme='dark'] {
+  --color-site-body: #121118;
+  --color-read-bkg: #16151e;
+  --color-read-post: #201e2b;
+  --color-site-bg: #16151e;
+  --color-site-inner: #f0edf7;
+  --color-site-footer: #a49bad;
+  --color-card: #201e2b;
+  --color-text: #e5dfed;
+  --color-block: #2a2636;
+  --color-codeblock: #191722;
+  --color-inlinecode: #e897bc;
+  --color-h1: #f0edf7;
+  --color-h2: #f0edf7;
+  --color-h3: #e5dfed;
+  --color-h4: #e5dfed;
+  --color-h5: #ccc3d5;
+  --color-h6: #afa4bb;
+  --color-p: #ccc3d5;
+  --color-list: #afa4bb;
+  --color-list-hl: #9377c9;
+  --color-meta: #a49bad;
+  --color-link: #a49bad;
+  --color-copyright-bkg: #292534;
+  --link-color: #e4e4e4;
+  --color-text-a10: rgba(229,223,237,0.1);
+  --color-text-a50: rgba(229,223,237,0.5);
+  --color-text-a60: rgba(229,223,237,0.6);
+  --color-text-a70: rgba(229,223,237,0.7);
+  --color-text-a80: rgba(229,223,237,0.8);
+  --color-text-a85: rgba(229,223,237,0.85);
+  --color-text-a90: rgba(229,223,237,0.9);
+  --color-card-a50: rgba(32,30,43,0.5);
+  --color-card-a60: rgba(32,30,43,0.6);
+  --color-card-a70: rgba(32,30,43,0.7);
+  --color-card-a80: rgba(32,30,43,0.8);
+  --color-card-a90: rgba(32,30,43,0.9);
+  --color-card-darken2: #1c1a25;
+  --color-card-lighten5: #2b283a;
+  --color-p-a20: rgba(204,195,213,0.2);
+  --color-p-a70: rgba(204,195,213,0.7);
+  --color-p-a75: rgba(204,195,213,0.75);
+  --color-block-lighten3: #312c3f;
+  --color-block-darken2: #252230;
+  --color-mix60-p-card: #878191;
+  --color-codeblock-darken6: #0c0b10;
+  --color-mix75-theme-text: #9478c8;
+  --color-mix90-block-text: #3c3848;
+}
+[color-scheme='dark'] img {
+  filter: brightness(95%) !important;
+}
+[color-scheme='dark'] .blur {
+  background: rgba(22,21,30,0.9) !important;
+}
+[color-scheme='dark'] .white-box.blur {
+  background: rgba(32,30,43,0.9) !important;
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a:hover {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] .article blockquote {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .article-title a {
+  color: var(--color-h1) !important;
+}
+[color-scheme='dark'] #u-search .modal,
+[color-scheme='dark'] #u-search .modal-header,
+[color-scheme='dark'] #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:focus {
+  background: var(--color-site-body) !important;
+}
+@media screen and (max-width: 500px) {
+  [color-scheme='dark'] .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+.l_header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: var(--color-card);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.l_header.auto {
+  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  -khtml-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  visibility: hidden;
+}
+.l_header.auto.show {
+  opacity: 1 !important;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  visibility: visible;
+}
+.l_header .container {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.l_header #wrapper {
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.l_header #wrapper .nav-main,
+.l_header #wrapper .nav-sub {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -khtml-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  align-items: center;
+}
+.l_header #wrapper .nav-main {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.l_header #wrapper.sub .nav-main {
+  transform: translateY(-64px);
+  -webkit-transform: translateY(-64px);
+  -khtml-transform: translateY(-64px);
+  -moz-transform: translateY(-64px);
+  -o-transform: translateY(-64px);
+  -ms-transform: translateY(-64px);
+}
+.l_header #wrapper .nav-sub {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  height: 64px;
+  width: calc(100% - 2 * 16px);
+  position: absolute;
+}
+.l_header #wrapper .nav-sub ::-webkit-scrollbar {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (min-width: 2048px) {
+  .l_header #wrapper .nav-sub {
+    max-width: 55vw;
+    margin: auto;
+  }
+}
+.l_header #wrapper.sub .nav-sub {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+}
+.l_header #wrapper .title {
+  position: relative;
+  color: var(--color-text);
+  padding-left: 24px;
+  max-height: 64px;
+}
+.l_header #wrapper .nav-main .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  line-height: 64px;
+  padding: 0 24px;
+  font-size: 1.25rem;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif, Helvetica, monospace;
+}
+.l_header #wrapper .nav-main .title img {
+  height: 64px;
+}
+.l_header .nav-sub {
+  max-width: 1080px;
+  margin: auto;
+}
+.l_header .nav-sub .title {
+  font-weight: bold;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif, Menlo, Monaco, monospace, sans-serif;
+  line-height: 1.2;
+  max-height: 64px;
+  white-space: normal;
+  flex-shrink: 1;
+}
+.l_header .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  line-height: 64px;
+  align-items: center;
+}
+.l_header .switcher .s-toc {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .l_header .switcher .s-toc {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+  }
+}
+.l_header .switcher >li {
+  height: 48px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  margin: 2px;
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li {
+    margin: 0 1px;
+    height: 48px;
+  }
+}
+.l_header .switcher >li >a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0.85em 1.1em;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  color: var(--theme);
+}
+.l_header .switcher >li >a:hover {
+  border: none;
+}
+.l_header .switcher >li >a.active,
+.l_header .switcher >li >a:active {
+  border: none;
+  background: var(--color-site-bg);
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li >a {
+    width: 36px;
+    height: 48px;
+  }
+}
+.l_header .nav-sub .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.l_header .m_search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  height: 64px;
+  width: 240px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (max-width: 1024px) {
+  .l_header .m_search {
+    width: 44px;
+    min-width: 44px;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  .l_header .m_search:hover {
+    width: 240px;
+  }
+  .l_header .m_search:hover input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search:hover .input {
+    width: 100%;
+  }
+  .l_header .m_search:hover .input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search {
+    min-width: 0;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.l_header .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.l_header .m_search .icon {
+  position: absolute;
+  width: 36px;
+  left: 5px;
+  color: var(--color-meta);
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .icon {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+.l_header .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.3;
+  width: 100%;
+  color: var(--color-text);
+  background: var(--color-card-darken2);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-left: 40px;
+  font-size: 0.8125rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search .input:focus {
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .input {
+    background: var(--color-block);
+    padding-left: 8px;
+    border: none;
+  }
+  .l_header .m_search .input:hover,
+  .l_header .m_search .input:focus {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .l_header .m_search {
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    background: var(--color-card-lighten5);
+    transition: all 0.28s ease;
+    -webkit-transition: all 0.28s ease;
+    -khtml-transition: all 0.28s ease;
+    -moz-transition: all 0.28s ease;
+    -o-transition: all 0.28s ease;
+    -ms-transition: all 0.28s ease;
+  }
+  .l_header .m_search .input {
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    margin-left: 16px;
+    padding-left: 16px;
+  }
+  .l_header.z_search-open .m_search {
+    width: 100%;
+  }
+  .l_header.z_search-open .m_search .input {
+    width: calc(100% - 120px);
+  }
+}
+ul.m-pc >li>a {
+  color: inherit;
+  border-bottom: 2px solid transparent;
+}
+ul.m-pc >li>a:active,
+ul.m-pc >li>a.active {
+  border-bottom: 2px solid var(--theme);
+}
+ul.m-pc li:hover >ul.list-v,
+ul.list-v li:hover >ul.list-v {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.nav-list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: stretch;
+}
+ul.nav-list-h>li {
+  position: relative;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  height: 100%;
+  line-height: 2.4;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+ul.nav-list-h>li >a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+}
+ul.list-v {
+  z-index: 1;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: absolute;
+  background: var(--color-card);
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  margin-top: -8px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  padding: 8px 0;
+}
+ul.list-v.show {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.list-v hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+ul.list-v >li {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+ul.list-v >li.header {
+  font-size: 0.78125rem;
+  font-weight: bold;
+  line-height: 2em;
+  color: var(--color-meta);
+  margin: 8px 16px 4px;
+}
+ul.list-v >li.header i {
+  margin-right: 8px;
+}
+ul.list-v >li ul {
+  margin-left: 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: -40px;
+}
+ul.list-v .aplayer-container {
+  min-height: 64px;
+  padding: 6px 16px;
+}
+ul.list-v >li>a {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  color: var(--color-list);
+  font-size: 0.8125rem;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0 20px 0 16px;
+  text-overflow: ellipsis;
+  margin: 0 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  ul.list-v >li>a {
+    line-height: 40px;
+  }
+}
+ul.list-v >li>a >i {
+  margin-right: 8px;
+}
+ul.list-v >li>a:active,
+ul.list-v >li>a.active {
+  color: var(--color-list-hl);
+}
+ul.list-v >li>a:hover {
+  color: var(--color-list-hl);
+  background: var(--color-site-bg);
+}
+.l_header .menu >ul>li>a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding: 0 8px;
+}
+.l_header .menu >ul>li>a >i {
+  margin-right: 4px;
+}
+.l_header ul.nav-list-h>li {
+  color: var(--color-list);
+  line-height: 64px;
+}
+.l_header ul.nav-list-h>li >a {
+  max-height: 64px;
+  overflow: hidden;
+  color: inherit;
+}
+.l_header ul.nav-list-h>li >a:active,
+.l_header ul.nav-list-h>li >a.active {
+  color: var(--theme);
+}
+.l_header ul.nav-list-h>li:hover>a {
+  color: var(--color-list-hl);
+}
+.l_header ul.nav-list-h>li i.music {
+  animation: rotate-effect 1.5s linear infinite;
+  -webkit-animation: rotate-effect 1.5s linear infinite;
+  -khtml-animation: rotate-effect 1.5s linear infinite;
+  -moz-animation: rotate-effect 1.5s linear infinite;
+  -o-animation: rotate-effect 1.5s linear infinite;
+  -ms-animation: rotate-effect 1.5s linear infinite;
+}
+@-moz-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+.menu-phone li ul.list-v {
+  right: calc(100% - 0.5 * 16px);
+}
+.menu-phone li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
+}
+#wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+@media screen and (min-width: 2048px) {
+  #wrapper {
+    max-width: 55vw;
+  }
+}
+#wrapper .menu {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  margin: 0 16px 0 0;
+}
+#wrapper .menu .list-v ul {
+  left: calc(100% - 0.5 * 16px);
+}
+.menu-phone {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: 16px;
+  right: 8px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.menu-phone ul {
+  right: calc(100% - 0.5 * 16px);
+}
+@media screen and (max-width: 500px) {
+  .menu-phone {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block;
+  }
+}
+.l_header {
+  max-width: 65vw;
+  left: calc((100% - 65vw) * 0.5);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+@media screen and (max-width: 2048px) {
+  .l_header {
+    max-width: 1112px;
+    left: calc((100% - 1112px) * 0.5);
+  }
+}
+@media screen and (max-width: 1112px) {
+  .l_header {
+    left: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .l_header #wrapper .nav-main .title {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .l_header #wrapper .nav-sub {
+    width: 100%;
+  }
+  .l_header #wrapper .nav-sub .title {
+    overflow-y: scroll;
+    margin-top: 2px;
+    padding: 8px 16px;
+  }
+  .l_header #wrapper .switcher {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    margin-right: 8px;
+  }
+  .l_header .menu {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list-v li {
+    max-width: 270px;
+  }
+}
+#u-search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 20px;
+  z-index: 1001;
+}
+@media screen and (max-width: 680px) {
+  #u-search {
+    padding: 0px;
+  }
+}
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+  .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+
+  </style>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    <script>
+      let userColorScheme=localStorage.getItem("color-scheme");
+      if (userColorScheme){
+        document.documentElement.setAttribute("color-scheme", userColorScheme);
+      }
+    </script>
+  
+
+
+  <script>
+// source/js/global.js
+// global.js 此文件硬编码到head中
+/************这个文件存放不需要重载的全局变量和全局函数*********/
+/**
+ * Volantis 主题全局变量
+ * 定义 window.volantis 全局对象和基础工具函数，需在所有其他脚本之前同步加载。
+ *
+ * 模块结构：
+ *   volantis.dom          - DOM 选择与封装
+ *   volantis.EventListener - 事件监听器管理（Pjax 清理）
+ *   volantis.pjax         - Pjax 生命周期回调
+ *   volantis.dark         - 暗色模式切换
+ *   volantis.js/css       - 动态脚本/样式加载（按需加载用）
+ *   volantis.scroll       - 滚动事件引擎
+ *   volantis.layoutHelper - 布局注入辅助
+ *   volantis.requestAnimationFrame - rAF 兼容封装
+ */
+// 全局变量和函数
+// window.volantis = {}; // volantis 全局变量
+/**
+ * 内存安全的全局 volantis 对象实现
+ * 特性：
+ * 1. 支持 window.volantis.xxx = yyy 直观赋值语法
+ * 2. 基于 WeakMap 存储数据，自动回收内存
+ * 3. 支持属性枚举（如 Object.keys(window.volantis)）
+ * 4. 支持删除属性（delete window.volantis.xxx）
+ */
+(function initializeVolantis() {
+  // 1. 初始化 WeakMap 存储实际数据（键：volantisProxy 实例，值：属性键值对）
+  const volantisDataStore = new WeakMap();
+
+  // 2. 创建 Proxy 代理处理属性访问
+  const volantisProxy = new Proxy({}, {
+    /**
+     * 拦截属性读取（如 window.volantis.dom）
+     * @param {Object} target - 代理目标对象（仅作为占位符，不存储数据）
+     * @param {string} prop - 访问的属性名
+     * @returns {any} 属性值或 undefined
+     */
+    get(target, prop) {
+      const data = volantisDataStore.get(volantisProxy);
+      return data?.[prop]; // 使用可选链避免数据未初始化时的错误
+    },
+
+    /**
+     * 拦截属性赋值（如 window.volantis.dom = "a"）
+     * @param {Object} target - 代理目标对象
+     * @param {string} prop - 赋值的属性名
+     * @param {any} value - 赋值的属性值
+     * @returns {boolean} 赋值是否成功
+     */
+    set(target, prop, value) {
+      // 初始化数据容器（若不存在）
+      if (!volantisDataStore.has(volantisProxy)) {
+        volantisDataStore.set(volantisProxy, Object.create(null)); // 使用无原型对象避免原型污染
+      }
+      // 存储属性值
+      const data = volantisDataStore.get(volantisProxy);
+      data[prop] = value;
+      return true; // 符合 Proxy 规范，返回成功标志
+    },
+
+    /**
+     * 拦截属性删除（如 delete window.volantis.dom）
+     * @param {Object} target - 代理目标对象
+     * @param {string} prop - 要删除的属性名
+     * @returns {boolean} 删除是否成功
+     */
+    deleteProperty(target, prop) {
+      const data = volantisDataStore.get(volantisProxy);
+      if (!data || !Object.prototype.hasOwnProperty.call(data, prop)) {
+        return false; // 属性不存在，删除失败
+      }
+      delete data[prop];
+      // 若数据为空，清理 WeakMap 条目（优化内存回收）
+      if (Object.keys(data).length === 0) {
+        volantisDataStore.delete(volantisProxy);
+      }
+      return true;
+    },
+
+    /**
+     * 拦截属性枚举（如 Object.keys(window.volantis)）
+     * @param {Object} target - 代理目标对象
+     * @returns {string[]} 可枚举的属性名数组
+     */
+    ownKeys(target) {
+      const data = volantisDataStore.get(volantisProxy);
+      return data ? Object.keys(data) : [];
+    },
+
+    /**
+     * 拦截属性描述符查询（如 Object.getOwnPropertyDescriptor）
+     * @param {Object} target - 代理目标对象
+     * @param {string} prop - 属性名
+     * @returns {PropertyDescriptor|undefined} 属性描述符
+     */
+    getOwnPropertyDescriptor(target, prop) {
+      const data = volantisDataStore.get(volantisProxy);
+      if (!data || !Object.prototype.hasOwnProperty.call(data, prop)) {
+        return undefined;
+      }
+      return {
+        value: data[prop],
+        writable: true,
+        enumerable: true,
+        configurable: true
+      };
+    }
+  });
+
+  // 3. 挂载到 window 对象，暴露全局访问入口
+  Object.defineProperty(window, 'volantis', {
+    value: volantisProxy,
+    writable: true, // 允许后续手动设置为 null 触发清理
+    configurable: true,
+    enumerable: true
+  });
+
+})();
+// 页面DOM操作模块
+volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
+/******************** volantis.getFunctionHash ********************************/
+// 简易文本哈希
+volantis.simpleTextHash= (str) => {
+  // 初始哈希值：选择质数5381（DJB2算法推荐的起始值）
+  let hash = 5381;
+  // 遍历每个字符，更新哈希值
+  for (let i = 0; i < str.length; i++) {
+    // 等价于 hash = hash * 33 + charCode（位移运算更高效）
+    hash = (hash << 5) + hash + str.charCodeAt(i);
+    // 避免数值过大溢出（可选：取模2^32，模拟32位无符号整数）
+    hash = hash & hash; // 或 hash >>> 0（转换为无符号）
+  }
+  // 转换为十六进制字符串，确保至少8位（补前导零）
+  return hash.toString(16).padStart(8, '0');
+}
+
+// 获取函数内容的哈希
+volantis.getFunctionHash= (func) => {
+    // 提取函数源码字符串
+    const funcStr = func.toString();
+    // 计算哈希值
+    return volantis.simpleTextHash(funcStr);
+}
+
+// 测试示例
+//function sampleFunc(a, b) {
+//    return a * b + 10;
+//}
+//console.log(volantis.getFunctionHash(sampleFunc)); // 输出函数源码的哈希
+/******************** volantis.EventListener ********************************/
+// 事件监听器 see: /source/js/app.js
+// 事件监听器模块
+volantis.EventListener = {
+  list: [],
+
+  // 移除所有需要清理的事件监听器
+  remove() {
+    this.list.forEach(listener => {
+      listener.ele.removeEventListener(listener.type, listener.f, false);
+    });
+    this.list = [];
+  }
+};
+
+// 事件监听器构造函数
+class VolantisEventListener {
+  constructor(type, handler, element) {
+    this.type = type;
+    this.f = handler;
+    this.ele = element;
+  }
+}
+/******************** volantis.dom.$ ********************************/
+// 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
+// DOM 操作封装
+class VolantisDom {
+  constructor(ele) {
+    this._ele = ele || document.createElement('div');
+    return new Proxy(this, {
+      get(target, prop) {
+        if (target[prop] !== undefined) {
+          return target[prop];
+        }
+        if (target._ele[prop] !== undefined) {
+          if (typeof target._ele[prop] === 'function') {
+            return target._ele[prop].bind(target._ele);
+          }
+          return target._ele[prop];
+        }
+        return undefined;
+      },
+      set(target, prop, value) {
+        if (target._ele[prop] !== undefined) {
+          target._ele[prop] = value;
+          return true;
+        }
+        target[prop] = value;
+        return true;
+      }
+    });
+  }
+
+  // 自定义方法
+  find(selector) {
+    const found = this._ele.querySelector(selector);
+    return found ? new VolantisDom(found) : null;
+  }
+
+  hasClass(className) {
+    return this._ele.classList.contains(className);
+  }
+
+  addClass(classNames) {
+    if (typeof classNames !== 'string') return this;
+    classNames.split(' ').forEach(className => {
+      className && this._ele.classList.add(className);
+    });
+    return this;
+  }
+
+  removeClass(classNames) {
+    if (typeof classNames !== 'string') return this;
+    classNames.split(' ').forEach(className => {
+      className && this._ele.classList.remove(className);
+    });
+    return this;
+  }
+
+  toggleClass(classNames) {
+    if (typeof classNames !== 'string') return this;
+    classNames.split(' ').forEach(className => {
+      className && this._ele.classList.toggle(className);
+    });
+    return this;
+  }
+
+  on(event, handler, removeOnPjax = true) {
+    if (typeof handler !== 'function') return this;
+    this._ele.addEventListener(event, handler, false);
+    if (removeOnPjax) {
+      volantis.EventListener.list.push(
+        new VolantisEventListener(event, handler, this._ele)
+      );
+    }
+    return this;
+  }
+
+  click(handler, removeOnPjax) {
+    return this.on('click', handler, removeOnPjax);
+  }
+
+  scroll(handler, removeOnPjax) {
+    return this.on('scroll', handler, removeOnPjax);
+  }
+
+  html(content) {
+    if (content === undefined) {
+      return this._ele.innerHTML;
+    }
+    this._ele.innerHTML = content;
+    return this;
+  }
+
+  hide() {
+    this._ele.classList.remove('show');
+    this._ele.style.removeProperty('display');
+    return this;
+  }
+
+  show() {
+    this._ele.classList.add('show');
+    this._ele.style.removeProperty('display');
+    return this;
+  }
+}
+// DOM 选择工厂函数
+volantis.dom.$ = (ele) => {
+  if (!ele) return null;
+  if (ele instanceof VolantisDom) {
+    return ele;
+  }
+  if (ele instanceof NodeList || ele instanceof HTMLCollection) {
+    return Array.from(ele).map(item => new VolantisDom(item));
+  }
+  if (ele instanceof Node) {
+    return new VolantisDom(ele);
+  }
+  return null;
+};
+/******************** RunItem ********************************/
+// 任务执行管理器
+class RunItem {
+  constructor() {
+    this.list = [];
+  }
+
+  start() {
+    this.list.forEach(item => item.run());
+  }
+
+  // name 存在时同名替换，否则追加
+  push(fn, name, useRequestAnimationFrame = true) {
+    if (typeof fn !== 'function') return;
+
+    let taskFn = fn;
+    if (useRequestAnimationFrame) {
+      taskFn = () => {
+        volantis.requestAnimationFrame(fn);
+      };
+    }
+
+    name = name || volantis.getFunctionHash(fn)
+    const idx = this.list.findIndex(item => item.name === name);
+    if (idx !== -1) {
+      this.list[idx] = new TaskItem(taskFn, name);
+      return;
+    }
+    this.list.push(new TaskItem(taskFn, name));
+  }
+
+  remove(name) {
+    if (typeof name !== 'string') return;
+    this.list = this.list.filter(item => item.name !== name);
+  }
+}
+
+class TaskItem {
+  constructor(fn, name) {
+    this.name = name || volantis.getFunctionHash(fn);
+    this.fn = fn;
+  }
+
+  run() {
+    try {
+      this.fn();
+    } catch (error) {
+      console.error(`Error executing task ${this.name}:`, error);
+    }
+  }
+}
+/******************** Pjax ********************************/
+// /layout/_plugins/pjax/index.ejs
+// volantis.pjax.send(callBack[,"callBackName"]) 传入pjax:send回调函数
+// volantis.pjax.push(callBack[,"callBackName"]) 传入pjax:complete回调函数
+// volantis.pjax.error(callBack[,"callBackName"]) 传入pjax:error回调函数
+volantis.pjax = {};
+volantis.pjax.method = {
+  complete: new RunItem(),
+  error: new RunItem(),
+  send: new RunItem()
+};
+volantis.pjax = Object.assign(volantis.pjax, {
+  push: volantis.pjax.method.complete.push.bind(volantis.pjax.method.complete),
+  error: volantis.pjax.method.error.push.bind(volantis.pjax.method.error),
+  send: volantis.pjax.method.send.push.bind(volantis.pjax.method.send)
+});
+/******************** RightMenu ********************************/
+  // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
+  // 可在 volantis.mouseEvent 处获取右键事件
+  volantis.rightmenu = {};
+  volantis.rightmenu.method = {
+    handle: new RunItem(),
+  }
+  volantis.rightmenu = Object.assign(volantis.rightmenu, {
+    handle: volantis.rightmenu.method.handle.push.bind(volantis.rightmenu.method.handle),
+  });
+/********************  Dark Mode  ********************************/
+  // /layout/_partial/scripts/darkmode.ejs
+  // volantis.dark.mode 当前模式 dark or light
+  // volantis.dark.toggle() 暗黑模式触发器
+  // volantis.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+volantis.dark = {};
+volantis.dark.method = {
+  toggle: new RunItem()
+};
+volantis.dark = Object.assign(volantis.dark, {
+  push: volantis.dark.method.toggle.push.bind(volantis.dark.method.toggle)
+});
+  /********************  Message  ********************************/
+  // VolantisApp.message
+  /********************  isMobile  ********************************/
+  // /source/js/app.js
+  // volantis.isMobile
+  // volantis.isMobileOld
+  /********************脚本动态加载函数********************************/
+  // volantis.js(src, cb)  cb 可以传入onload回调函数 或者 JSON对象 例如: volantis.js("src", ()=>{}) 或 volantis.js("src", {defer:true,onload:()=>{}})
+  // volantis.css(src)
+
+  // 返回Promise对象，如下方法同步加载资源，这利于处理文件资源之间的依赖关系，例如：APlayer 需要在 MetingJS 之前加载
+  // (async () => {
+  //     await volantis.js("...theme.plugins.aplayer.js.aplayer...")
+  //     await volantis.js("...theme.plugins.aplayer.js.meting...")
+  // })();
+
+// 脚本动态加载（按需加载用）
+// volantis.js(src, cb)  cb: onload 回调或属性对象 {defer:true, onload:()=>{}}
+// volantis.css(src)
+volantis.js = (src, cb) => {
+  const escapeSelector = str => str.replace(/[#".'()[\]]/g, '\\$&');
+  return new Promise((resolve, reject) => {
+    setTimeout(function () {
+    const existingScript = document.querySelector(`script[src="${escapeSelector(src)}"]`);
+    if (existingScript) {
+      resolve();
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = src;
+
+    const handleLoad = () => {
+      if (typeof cb === 'function') cb();
+      resolve();
+    };
+
+    script.onload = handleLoad;
+    script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+
+    if (cb && typeof cb === 'object' && !Array.isArray(cb)) {
+      for (const p in cb) {
+        if (!cb.hasOwnProperty(p)) continue;
+        if (p === 'onload') {
+          script.onload = () => {
+            cb[p]();
+            resolve();
+          };
+        } else if (p === 'pjax') {
+          script.setAttribute('pjax', '');
+          script.setAttribute('data-pjax', '');
+        } else if (cb[p] === true) {
+          script.setAttribute(p, '');
+        } else {
+          script.setAttribute(p, cb[p]);
+        }
+      }
+    }
+
+    (document.head || document.documentElement).appendChild(script);
+    });
+  });
+};
+
+volantis.css = (src) => {
+  const escapeSelector = str => str.replace(/[#".'()[\]]/g, '\\$&');
+  return new Promise((resolve, reject) => {
+   setTimeout(function () {
+    const existingLink = document.querySelector(`link[href="${escapeSelector(src)}"]`);
+    if (existingLink) {
+      resolve();
+      return;
+    }
+    const link = document.createElement('link');
+    Object.assign(link, {
+      rel: 'stylesheet',
+      href: src,
+      onload: () => resolve(),
+      onerror: () => reject(new Error(`Failed to load CSS: ${src}`))
+    });
+    document.head.appendChild(link);
+    });
+  });
+};
+
+
+  /********************按需加载的插件********************************/
+  // volantis.import.jQuery().then(()=>{})
+  volantis.import = {
+    jQuery: () => {
+      if (typeof jQuery == "undefined") {
+        return volantis.js(volantis.GLOBAL_CONFIG.cdn.jquery)
+      } else {
+        return new Promise(resolve => {
+          resolve()
+        });
+      }
+    }
+  }
+  /********************** 节流和防抖 ********************************/
+  // 节流函数：确保指定时间内仅执行一次 时间戳版本的节流实现
+  volantis.throttle = (func, delay = 200) => {
+    let lastTime = 0;
+    return function (...args) {
+      const now = Date.now();
+      if (now - lastTime >= delay) {
+        func.apply(this, args);
+        lastTime = now;
+      }
+    };
+  };
+  // 防抖函数 setTimeout实现
+  volantis.debounce = (func, wait = 200) => {
+    let timer = null;
+    return function () {
+      if (timer) {
+        clearTimeout(timer)
+      }
+      timer = setTimeout(() => {
+        func.apply(this, arguments)
+        timer = null
+      }, wait)
+    };
+  };
+  /********************** requestAnimationFrame ********************************/
+  // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  volantis.requestAnimationFrame = (fn) => {
+    if (!window.requestAnimationFrame) {
+      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (callback) {
+        return window.setTimeout(callback, 1000 / 60);
+      };
+    }
+    return window.requestAnimationFrame(fn);
+  };
+  // 3. 基于 requestAnimationFrame 的节流函数
+  volantis.rafThrottle = (fn) => {
+      let rafId = null
+      return (...args) => {
+        if (rafId) return
+        rafId = volantis.requestAnimationFrame(() => {
+          fn(...args)
+          rafId = null
+        })
+      }
+  };
+/************************ layoutHelper *****************************************/
+// Layout Helper
+volantis.layoutHelper = (helper, html, opt = {}) => {
+  const { clean = false, pjax = true } = { ...opt };
+  const handleLayout = () => {
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+    const layoutHelper = document.querySelector(`#layoutHelper-${helper}`);
+    if (layoutHelper) {
+      if (clean) layoutHelper.innerHTML = '';
+      layoutHelper.append(tempDiv);
+    }
+  };
+
+  handleLayout();
+  if (pjax) {
+    volantis.pjax.push(handleLayout, `layoutHelper-${helper}`);
+  }
+};
+/****************************** 滚动事件处理 ****************************************/
+// 滚动事件处理
+volantis.scroll = {
+    engine: new RunItem(),
+    unengine: new RunItem(),
+  };
+  volantis.scroll = Object.assign(volantis.scroll, {
+    push: volantis.scroll.engine.push.bind(volantis.scroll.engine),
+  });
+  // 滚动条距离顶部的距离
+  volantis.scroll.getScrollTop = () => {
+    let scrollPos;
+    if (window.pageYOffset) {
+      scrollPos = window.pageYOffset;
+    } else if (document.compatMode && document.compatMode != 'BackCompat') {
+      scrollPos = document.documentElement.scrollTop;
+    } else if (document.body) {
+      scrollPos = document.body.scrollTop;
+    }
+    return scrollPos;
+  }
+  volantis.scroll.scrollHeight = function () {
+    return Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+    )
+  }
+  volantis.scroll.offsetHeight = function () {
+    return Math.min(
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight,
+      document.body.clientHeight,
+      document.documentElement.clientHeight
+    )
+  }
+  volantis.scroll.progress = function () {
+    return volantis.scroll.getScrollTop() / (volantis.scroll.scrollHeight() - volantis.scroll.offsetHeight())
+  }
+  // 使用 requestAnimationFrame 处理滚动事件
+  // `volantis.scroll.del` 中存储了一个数值, 该数值检测一定时间间隔内滚动条滚动的位移, 数值的检测频率是浏览器的刷新频率. 数值为正数时, 表示向下滚动. 数值为负数时, 表示向上滚动.
+  volantis.scroll.handleScrollEvents = () => {
+    volantis.scroll.lastScrollTop = volantis.scroll.getScrollTop()
+    function loop() {
+      const scrollTop = volantis.scroll.getScrollTop();
+      if (volantis.scroll.lastScrollTop !== scrollTop) {
+        volantis.scroll.del = scrollTop - volantis.scroll.lastScrollTop;
+        volantis.scroll.lastScrollTop = scrollTop;
+        // if (volantis.scroll.del > 0) {
+        //   console.log("向下滚动");
+        // } else {
+        //   console.log("向上滚动");
+        // }
+        // 注销过期的unengine未滚动事件
+        volantis.scroll.unengine.list = []
+        volantis.scroll.engine.start();
+      } else {
+        volantis.scroll.unengine.start();
+      }
+      volantis.requestAnimationFrame(loop)
+    }
+    volantis.requestAnimationFrame(loop)
+  }
+  volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
+  // 触发页面滚动至目标元素位置
+  volantis.scroll.to = (ele, option = {}) => {
+    if (!ele) return;
+    volantis.scroll.ele = ele;
+    // 默认配置
+    opt = {
+      top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
+      behavior: volantis.GLOBAL_CONFIG.scroll_behavior
+    }
+    // 定义配置
+    if ("top" in option) {
+      opt.top = option.top
+    }
+    if ("behavior" in option) {
+      opt.behavior = option.behavior
+    }
+    if ("addTop" in option) {
+      opt.top += option.addTop
+    }
+    if (!("observerDic" in option)) {
+      option.observerDic = 100
+    }
+    // 滚动
+    window.scrollTo(opt);
+    // 监视器
+    // 监视并矫正元素滚动到指定位置
+    // 用于处理 lazyload 引起的 cls 导致的定位失败问题
+    // option.observer = false
+    if (option.observer) {
+      setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
+        volantis.scroll.unengine.push(() => {
+          let me = ele.getBoundingClientRect().top
+          if (!(me >= -option.observerDic && me <= option.observerDic)) {
+            volantis.scroll.to(ele, option)
+          }
+          volantis.scroll.unengine.remove("unengineObserver")
+        }, "unengineObserver")
+      }, 1000)
+    }
+  }
+  /********************** Content Visibility ********************************/
+  // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
+  // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
+  // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
+  volantis.cleanContentVisibility = () => {
+    if (document.querySelector(".post-story")) {
+      console.log("cleanContentVisibility");
+      document.querySelectorAll(".post-story").forEach(e => {
+        e.classList.remove("post-story")
+      })
+    }
+  }
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+//图像加载出错时的处理
+// 图片错误降级
+function errorImgAvatar(img) {
+  img.src = volantis.GLOBAL_CONFIG.default.avatar;
+  img.srcset = volantis.GLOBAL_CONFIG.default.avatar;
+  img.onerror = null;
+}
+
+function errorImgCover(img) {
+  img.src = volantis.GLOBAL_CONFIG.default.cover;
+  img.srcset = volantis.GLOBAL_CONFIG.default.cover;
+  img.onerror = null;
+}
+/******************************************************************************/
+// Hack Interval
+// 保存原生定时器方法
+const nativeSetTimeout = window.setTimeout;
+const nativeSetInterval = window.setInterval;
+const nativeClearTimeout = window.clearTimeout;
+const nativeClearInterval = window.clearInterval;
+
+// 存储活动定时器ID的数组
+volantis.activeTimeout = [];
+volantis.activeInterval = [];
+
+// 重写setTimeout：执行后自动移除ID
+window.setTimeout = function(callback, delay, ...args) {
+  // 包装回调函数，执行后从列表移除ID
+  const wrappedCallback = function(...innerArgs) {
+    try {
+      // 执行原始回调（保持this指向和参数传递）
+      return callback.apply(this, innerArgs);
+    } finally {
+      // 无论回调是否报错，均移除ID
+      const index = volantis.activeTimeout.indexOf(timerId);
+      if (index !== -1) volantis.activeTimeout.splice(index, 1);
+    }
+  };
+  
+  // 调用原生setTimeout获取ID
+  const timerId = nativeSetTimeout(wrappedCallback, delay, ...args);
+  // 添加到活动列表
+  volantis.activeTimeout.push(timerId);
+  return timerId;
+};
+
+// 重写setInterval：需显式清除才移除ID
+window.setInterval = function(callback, delay, ...args) {
+  const timerId = nativeSetInterval(callback, delay, ...args);
+  volantis.activeInterval.push(timerId);
+  return timerId;
+};
+
+// 重写清除方法：同步移除ID列表记录
+window.clearTimeout = function(timerId) {
+  nativeClearTimeout(timerId);
+  const index = volantis.activeTimeout.indexOf(timerId);
+  if (index !== -1) volantis.activeTimeout.splice(index, 1);
+};
+
+window.clearInterval = function(timerId) {
+  nativeClearInterval(timerId);
+  const index = volantis.activeInterval.indexOf(timerId);
+  if (index !== -1) volantis.activeInterval.splice(index, 1);
+};
+volantis.getActiveInterval = function () {
+  return [...volantis.activeInterval];
+}
+volantis.getActiveTimeout = function () {
+  return [...volantis.activeTimeout];
+}
+volantis.clearAllTimers = function (){
+  volantis.getActiveInterval().forEach(function(i) {
+    clearInterval(i);
+  });
+  volantis.getActiveTimeout().forEach(function(i) {
+    clearTimeout(i);
+  });
+}
+volantis.pjax.send(volantis.clearAllTimers,"clearAllTimers");
+/******************************************************************************/
+// DOMContentLoaded：缓存 DOM 引用
+document.addEventListener('DOMContentLoaded', function () {
+  /******************** volantis.dom ********************************/
+  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
+  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
+  volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
+  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
+  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
+  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
+  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
+  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
+  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
+});
+/******************************************************************************/
+
+</script>
+<script>
+  volantis.debug = false; // 调试模式
+  volantis.GLOBAL_CONFIG = {
+    root: "/",
+    debug: false,
+    default: {"avatar":"/assets/tephrofos/avatar.webp","link":"/assets/tephrofos/favicon.svg","cover":"/assets/tephrofos/avatar.webp","image":"/assets/tephrofos/favicon.svg","topic":"/assets/tephrofos/favicon.svg","project":"/assets/tephrofos/favicon.svg","banner":"/assets/tephrofos/avatar.webp","loading":"/assets/tephrofos/favicon.svg","image_onerror":"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2rem' height='2rem' viewBox='0 0 24 24'%3E%3C!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ --%3E%3Cpath fill='%23F44336' d='M22 12.698c-.002 1.47-.013 2.718-.096 3.743c-.097 1.19-.296 2.184-.74 3.009a4.2 4.2 0 0 1-.73.983c-.833.833-1.893 1.21-3.237 1.39C15.884 22 14.2 22 12.053 22h-.106c-2.148 0-3.83 0-5.144-.177c-1.343-.18-2.404-.557-3.236-1.39c-.738-.738-1.12-1.656-1.322-2.795c-.2-1.12-.236-2.512-.243-4.241Q1.999 12.737 2 12v-.054c0-2.148 0-3.83.177-5.144c.18-1.343.557-2.404 1.39-3.236s1.893-1.21 3.236-1.39c1.168-.157 2.67-.175 4.499-.177a.697.697 0 1 1 0 1.396c-1.855.002-3.234.018-4.313.163c-1.189.16-1.906.464-2.436.994S3.72 5.8 3.56 6.99C3.397 8.2 3.395 9.788 3.395 12v.784l.932-.814a2.14 2.14 0 0 1 2.922.097l3.99 3.99a1.86 1.86 0 0 0 2.385.207l.278-.195a2.79 2.79 0 0 1 3.471.209l2.633 2.37c.265-.557.423-1.288.507-2.32c.079-.972.09-2.152.091-3.63a.698.698 0 0 1 1.396 0' opacity='.5'/%3E%3Cpath fill='%23F44336' fill-rule='evenodd' d='M17.5 11c-2.121 0-3.182 0-3.841-.659S13 8.621 13 6.5s0-3.182.659-3.841S15.379 2 17.5 2s3.182 0 3.841.659S22 4.379 22 6.5s0 3.182-.659 3.841S19.621 11 17.5 11m-1.47-7.03a.75.75 0 1 0-1.06 1.06l1.47 1.47l-1.47 1.47a.75.75 0 0 0 1.06 1.06l1.47-1.47l1.47 1.47a.75.75 0 1 0 1.06-1.06L18.56 6.5l1.47-1.47a.75.75 0 0 0-1.06-1.06L17.5 5.44z' clip-rule='evenodd'/%3E%3C/svg%3E"},
+    lastupdate: new Date(1790683487501),
+    scroll_behavior: "smooth",
+    cdn: {
+      jquery: "/vendor/jquery-3.7.1/dist/jquery.min.js",
+      izitoast_css: "https://unpkg.com/izitoast@1.4.0/dist/css/iziToast.min.css",
+      izitoast_js: "https://unpkg.com/izitoast@1.4.0/dist/js/iziToast.min.js",
+      fancybox_css: "/vendor/fancybox-5.0.36/dist/fancybox/fancybox.css",
+      fancybox_js: "/vendor/fancybox-5.0.36/dist/fancybox/fancybox.umd.js"
+    },
+    sidebar: {
+      webinfo: {
+        lastupd: {
+          enable: true,
+          friendlyShow: true
+        },
+        runtime: {
+          data: "2020/01/01",
+          unit: "天"
+        }
+      }
+    },
+    plugins: {
+      message: {"enable":false,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":false,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":false,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      
+      
+    },
+    tag_plugins: {
+      chat: {"api":""},
+    },
+    search: {
+      
+
+      
+        dataPath: "/search.json",
+      
+
+      
+    },
+    languages: {
+      
+        search: {
+          hits_empty: "找不到您查询的内容：${query}",
+          hits_stats: "找到 ${hits} 条结果，用时 ${time} 毫秒",
+          normal: "输入关键词搜索",
+          hits_found: "找到 ${totalResults} 个相关结果",
+          history: "搜索历史",
+          no_history: "暂无搜索历史",
+          clear_history: "清除历史",
+          filter_all: "全部",
+          filter_posts: "文章",
+          filter_pages: "页面",
+          filter_tags: "标签",
+          searching: "搜索中...",
+          placeholder: "搜索文章、标签或分类...",
+          label_posts: "文章",
+          label_pages: "页面",
+          label_tags: "标签"
+        },
+      
+      search: {
+        no_title: "无标题",
+        config_invalid: "搜索配置无效，请检查设置。"
+      }
+    }
+  }
+</script>
+
+
+    <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Pixel & Pointer","url":"https://www.recode88.cn/","logo":{"@type":"ImageObject","url":"/assets/tephrofos/avatar.webp","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"recode","image":{"@type":"ImageObject","url":"/assets/tephrofos/avatar.webp"},"url":"https://www.recode88.cn/","sameAs":[],"description":"一个关于代码、图形与成长的个人技术博客。记录计算机图形学、3D 建模与动画的探索，分享 Python、C++、算法与 ACM 学习笔记，同时记录 408 与 IELTS 的学习过程。从 Pointer 到 Pixel，从 Algorithm 到 Render。Keep learning. Keep building."},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.recode88.cn/","name":"Pixel & Pointer"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Pixel & Pointer","url":"https://www.recode88.cn/","keywords":["计算机图形学","Computer Graphics","C++","Python","ACM","算法","数据结构",408,"考研408","3D建模","Blender","Houdini","Unity","动画","角色动画","Rendering","Shader","OpenGL","IELTS","雅思","编程","技术博客","学习笔记"],"description":"一个关于代码、图形与成长的个人技术博客。记录计算机图形学、3D 建模与动画的探索，分享 Python、C++、算法与 ACM 学习笔记，同时记录 408 与 IELTS 的学习过程。从 Pointer 到 Pixel，从 Algorithm 到 Render。Keep learning. Keep building.","author":{"@type":"Person","name":"recode","image":{"@type":"ImageObject","url":"/assets/tephrofos/avatar.webp"},"url":"https://www.recode88.cn/","description":"一个关于代码、图形与成长的个人技术博客。记录计算机图形学、3D 建模与动画的探索，分享 Python、C++、算法与 ACM 学习笔记，同时记录 408 与 IELTS 的学习过程。从 Pointer 到 Pixel，从 Algorithm 到 Render。Keep learning. Keep building."},"publisher":{"@type":"Organization","name":"Pixel & Pointer","url":"https://www.recode88.cn/","logo":{"@type":"ImageObject","url":"/assets/tephrofos/avatar.webp","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.recode88.cn?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"关于 Pixel & Pointer","description":"recode 的个人技术博客，记录代码、图形与算法的学习。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.recode88.cn/about/"},"author":{"@type":"Person","name":"recode","image":{"@type":"ImageObject","url":"/assets/tephrofos/avatar.webp"},"url":"https://www.recode88.cn/"},"publisher":{"@type":"Organization","name":"Pixel & Pointer","logo":{"@type":"ImageObject","url":"/assets/tephrofos/avatar.webp","width":192,"height":192}},"url":"https://www.recode88.cn/about/","wordCount":0,"datePublished":"2026-09-28T16:00:00.000Z","dateModified":"2026-09-29T12:04:35.179Z","image":{"@type":"ImageObject","url":"/assets/tephrofos/avatar.webp","width":192,"height":192}}]</script>
+  <!-- import head_end begin -->
+  <!-- import head_end end -->
+  <!-- Custom Files headEnd begin-->
+  <link rel="stylesheet" href="/css/tephrofos.css">
+
+
+<link rel="stylesheet" href="/css/about.css">
+
+
+
+
+<meta name="theme-color" content="#f5f4f8">
+
+<script src="/js/time-theme.js"></script>
+
+
+  <!-- Custom Files headEnd end-->
+<!-- hexo injector head_end start --><link rel="alternate" type="application/atom+xml" title="Pixel &amp; Pointer" href="https://www.recode88.cn/atom.xml"><!-- hexo injector head_end end --></head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <!-- import body_begin begin-->
+    <!-- import body_begin end-->
+    <!-- Custom Files bodyBegin begin-->
+    
+    <!-- Custom Files bodyBegin end-->
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" title="comment"></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+            <i class='fa-solid fa-terminal'></i>
+          
+          
+            Pixel &amp; Pointer
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="首页"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-house fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="文章"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-code fa-fw'></i>文章
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/gallery/" title="作品"
+                  
+                  
+                  
+                    active-action="action-gallery"
+                  >
+                  <i class='fa-solid fa-cubes fa-fw'></i>作品
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-hashtag fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-user fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+      
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fa-solid fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="搜索文章、标签或代码" />
+        </form>
+      </div>
+      
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" title="search"></a></li>
+				
+				<li>
+          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" title="menu"></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="首页"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  <i class='fa-solid fa-house fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="文章"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  <i class='fa-solid fa-code fa-fw'></i>文章
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/gallery/" title="作品"
+                  
+                  
+                  
+                    active-action="action-gallery"
+                  >
+                  <i class='fa-solid fa-cubes fa-fw'></i>作品
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  <i class='fa-solid fa-hashtag fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  <i class='fa-solid fa-user fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+
+      <!-- Custom Files header begin -->
+      
+<button class="tf-theme-toggle toggle-mode-btn" type="button" aria-label="切换明暗模式" title="切换明暗模式">
+  <i class="fa-solid fa-moon" aria-hidden="true"></i>
+  <span data-theme-label>深色模式</span>
+</button>
+
+
+      <!-- Custom Files header end -->
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+      
+  
+</div>
+
+      <div id="safearea">
+        <div class="body-wrapper">
+          
+
+
+
+
+
+
+
+<div id="l_main" class=' no_sidebar'>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-page" id="page" itemscope itemprop="blogPost">
+  <!-- 结构化数据：统一解码永久链接 -->
+  <link itemprop="mainEntityOfPage" href="https://www.recode88.cn/about/">
+  <!-- 结构化数据：发布者信息（隐藏） -->
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Pixel &amp; Pointer">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="name" content="关于 Pixel &amp; Pointer">
+    <meta itemprop="description" content="recode 的个人技术博客，记录代码、图形与算法的学习。">
+  </span>
+  <!-- 文章顶部元信息：标题、作者、日期等（复用子模板） -->
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="hidden" itemprop="name headline">
+        关于 Pixel & Pointer
+      </h1>
+    
+    
+  </div>
+
+
+  <!-- 插件注入点 -->
+  <div id="layoutHelper-page-plugins"></div>
+  <!-- 文章核心内容区 -->
+  <div id="post-body" itemprop="articleBody">
+    <div class="about-page">
+  <section class="about-hero" aria-labelledby="about-title">
+    <div class="about-intro">
+      <p class="about-eyebrow"><span></span> A LITTLE ABOUT ME</p>
+      <h1 id="about-title">你好，我是 <span>recode</span><span class="about-period">.</span></h1>
+      <p class="about-lead">写代码，研究图形，记录探索。</p>
+      <p class="about-description">欢迎来到 Pixel &amp; Pointer。<br>这里记录代码、图形与算法的学习过程，也放一些作品和日常兴趣。</p>
+      <div class="about-actions">
+        <a class="about-button about-button-primary" href="/archives/">读读文章 <span aria-hidden="true">↗</span></a>
+        <a class="about-button" href="/gallery/">看看作品 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="about-identity">
+      <div class="about-avatar-wrap"><img class="about-avatar lazyload" src="/assets/tephrofos/author-avatar.webp" class="lazyload" data-srcset="/assets/tephrofos/author-avatar.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="recode 的头像" width="160" height="160" loading="eager" decoding="async"></div>
+      <span class="about-handle">recode</span>
+      <span class="about-identity-note">Pixel &amp; Pointer</span>
+      <div class="about-identity-foot"><span>POINTER → PIXEL</span><span aria-hidden="true">✳</span></div>
+    </div>
+  </section>
+  <section class="about-interests" aria-label="关注的方向">
+    <div class="about-interest"><span class="about-interest-number" aria-hidden="true">01</span><div><h2>图形与创作</h2><p>计算机图形学 · 3D 建模 · 动画</p></div></div>
+    <div class="about-interest"><span class="about-interest-number" aria-hidden="true">02</span><div><h2>代码与算法</h2><p>Python · C++ · 数据结构与算法</p></div></div>
+    <div class="about-interest"><span class="about-interest-number" aria-hidden="true">03</span><div><h2>学习笔记</h2><p>ACM · 408 · IELTS</p></div></div>
+  </section>
+  <section class="about-section about-github" aria-labelledby="about-github-title">
+    <div class="about-section-heading"><div><p class="about-eyebrow">ON GITHUB</p><h2 id="about-github-title">代码放在这里<span class="about-title-dot">.</span></h2></div><span class="about-section-aside">项目与日常编程</span></div>
+    <div class="about-github-card">
+    <div class="about-github-overview">
+      <div class="about-github-profile">
+        <img class="about-github-avatar no-lazy" src="https://avatars.githubusercontent.com/u/199863676?v=4" alt="" width="64" height="64" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+        <div class="about-github-identity"><h3>recode2025</h3><a class="about-github-handle" href="https://github.com/recode2025" target="_blank" rel="noopener noreferrer">@recode2025</a></div>
+      </div>
+      <a class="about-github-home" href="https://github.com/recode2025" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub 主页 <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="about-github-stats"><a href="https://github.com/recode2025?tab=repositories" target="_blank" rel="noopener noreferrer"><div><strong>21</strong><span>公开仓库</span></div></a><a href="https://github.com/recode2025?tab=followers" target="_blank" rel="noopener noreferrer"><div><strong>1</strong><span>关注者</span></div></a><a href="https://github.com/recode2025?tab=following" target="_blank" rel="noopener noreferrer"><div><strong>4</strong><span>正在关注</span></div></a></div>
+    <div class="about-github-repositories"><p class="about-github-list-label">最近更新的仓库</p><div class="about-github-repo-grid"><a class="about-github-repo" href="https://github.com/recode2025/recode2025" target="_blank" rel="noopener noreferrer">
+      <div class="about-github-repo-heading"><i class="fa-solid fa-book-bookmark" aria-hidden="true"></i><h3>recode2025</h3><span aria-hidden="true">↗</span></div>
+      <p class="about-github-repo-description">README</p>
+      <div class="about-github-repo-meta">
+        
+        <span aria-label="0 个 Star"><i class="fa-regular fa-star" aria-hidden="true"></i>0</span>
+        <span aria-label="0 个 Fork"><i class="fa-solid fa-code-fork" aria-hidden="true"></i>0</span>
+      </div>
+      <p class="about-github-repo-date">推送于 <time datetime="2026-09-29T09:18:00.000Z">2026/09/29</time></p>
+    </a>
+<a class="about-github-repo" href="https://github.com/recode2025/zongce-gs" target="_blank" rel="noopener noreferrer">
+      <div class="about-github-repo-heading"><i class="fa-solid fa-book-bookmark" aria-hidden="true"></i><h3>zongce-gs</h3><span aria-hidden="true">↗</span></div>
+      
+      <div class="about-github-repo-meta">
+        <span class="about-github-language"><span aria-hidden="true"></span>JavaScript</span>
+        <span aria-label="0 个 Star"><i class="fa-regular fa-star" aria-hidden="true"></i>0</span>
+        <span aria-label="0 个 Fork"><i class="fa-solid fa-code-fork" aria-hidden="true"></i>0</span>
+      </div>
+      <p class="about-github-repo-date">推送于 <time datetime="2026-09-17T10:36:09.000Z">2026/09/17</time></p>
+    </a>
+<a class="about-github-repo" href="https://github.com/recode2025/zongce" target="_blank" rel="noopener noreferrer">
+      <div class="about-github-repo-heading"><i class="fa-solid fa-book-bookmark" aria-hidden="true"></i><h3>zongce</h3><span aria-hidden="true">↗</span></div>
+      
+      <div class="about-github-repo-meta">
+        <span class="about-github-language"><span aria-hidden="true"></span>TypeScript</span>
+        <span aria-label="0 个 Star"><i class="fa-regular fa-star" aria-hidden="true"></i>0</span>
+        <span aria-label="0 个 Fork"><i class="fa-solid fa-code-fork" aria-hidden="true"></i>0</span>
+      </div>
+      <p class="about-github-repo-date">推送于 <time datetime="2026-09-16T11:49:59.000Z">2026/09/16</time></p>
+    </a></div></div>
+    <p class="about-data-note">资料更新于 <time datetime="2026-09-29T09:50:47.236Z">2026/09/29</time> · 仓库更新于 <time datetime="2026-09-29T09:50:48.273Z">2026/09/29</time></p>
+  </div>
+  </section>
+  <section class="about-section about-playing" aria-labelledby="about-games-title">
+    <div class="about-section-heading"><div><p class="about-eyebrow">OFF THE CLOCK</p><h2 id="about-games-title">也喜欢这些游戏<span class="about-title-dot">.</span></h2></div><span class="about-section-aside">我的游戏列表</span></div>
+    <div class="about-games"><article class="about-game" data-game="starrail">
+      <a class="about-game-visual" href="https://sr.mihoyo.com/" target="_blank" rel="noopener noreferrer" aria-label="崩坏：星穹铁道官网">
+        <img class="about-game-image no-lazy" src="/assets/about/games/starrail.webp" alt="崩坏：星穹铁道" width="720" height="450" loading="lazy" decoding="async">
+        <span class="about-game-server">官服</span>
+      </a>
+      <div class="about-game-body">
+        <h3 class="about-game-title">崩坏：星穹铁道</h3>
+        <p class="about-game-en">Honkai: Star Rail</p>
+        <div class="about-game-stats"><div><strong>70</strong><span>等级</span></div><div><strong>64</strong><span>角色</span></div><div><strong>1,165</strong><span>成就</span></div></div>
+        <p class="about-game-note">更新于 2026/09/29<span>UID 133043327</span></p>
+      </div>
+    </article>
+<article class="about-game" data-game="endfield">
+      <a class="about-game-visual" href="https://endfield.hypergryph.com/" target="_blank" rel="noopener noreferrer" aria-label="明日方舟：终末地官网">
+        <img class="about-game-image no-lazy" src="/assets/about/games/endfield.webp" alt="明日方舟：终末地" width="720" height="450" loading="lazy" decoding="async">
+        <span class="about-game-server">官服</span>
+      </a>
+      <div class="about-game-body">
+        <h3 class="about-game-title">明日方舟：终末地</h3>
+        <p class="about-game-en">Arknights: Endfield</p>
+        <div class="about-game-stats"><div><strong>60</strong><span>等级</span></div><div><strong>4</strong><span>展柜角色</span></div></div>
+        <p class="about-game-note">更新于 2026/09/29<span>UID 1823280141</span></p>
+      </div>
+    </article>
+<article class="about-game" data-game="zzz">
+      <a class="about-game-visual" href="https://zzz.mihoyo.com/" target="_blank" rel="noopener noreferrer" aria-label="绝区零官网">
+        <img class="about-game-image no-lazy" src="/assets/about/games/zzz.webp" alt="绝区零" width="720" height="450" loading="lazy" decoding="async">
+        <span class="about-game-server">官服</span>
+      </a>
+      <div class="about-game-body">
+        <h3 class="about-game-title">绝区零</h3>
+        <p class="about-game-en">Zenless Zone Zero</p>
+        <div class="about-game-stats"><div><strong>60</strong><span>等级</span></div><div><strong>6</strong><span>展柜角色</span></div></div>
+        <p class="about-game-note">更新于 2026/09/29<span>UID 24816656</span></p>
+      </div>
+    </article>
+<article class="about-game" data-game="wuthering">
+      <a class="about-game-visual" href="https://mc.kurogames.com/" target="_blank" rel="noopener noreferrer" aria-label="鸣潮官网">
+        <img class="about-game-image no-lazy" src="/assets/about/games/wuthering.webp" alt="鸣潮" width="720" height="450" loading="lazy" decoding="async">
+        <span class="about-game-server">官服</span>
+      </a>
+      <div class="about-game-body">
+        <h3 class="about-game-title">鸣潮</h3>
+        <p class="about-game-en">Wuthering Waves</p>
+        
+        <p class="about-game-note">个人档案待补充<span>UID 116584675</span></p>
+      </div>
+    </article></div>
+  </section>
+  <section class="about-section about-bilibili" aria-labelledby="about-bilibili-title">
+    <div class="about-section-heading"><div><p class="about-eyebrow">ON BILIBILI</p><h2 id="about-bilibili-title">B 站的另一面<span class="about-title-dot">.</span></h2></div><a class="about-text-link" href="https://space.bilibili.com/475363158" target="_blank" rel="noopener noreferrer">去 B 站主页 <span aria-hidden="true">↗</span></a></div>
+    <div class="about-bilibili-content">
+    <div class="about-bili-profile">
+      <img class="about-bili-avatar no-lazy" src="https://i0.hdslb.com/bfs/face/6b679e8daaa61ec272eadb3d4cb27a17b4d8235c.jpg" alt="" width="56" height="56" loading="lazy" referrerpolicy="no-referrer">
+      <div><h3 class="about-bili-name">recode2025</h3><p class="about-bili-sign">UID 475363158</p></div>
+      <a class="about-bili-home" href="https://space.bilibili.com/475363158" target="_blank" rel="noopener noreferrer">去主页看看 <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="about-bili-stats"><div><strong>4,177</strong><span>粉丝</span></div><div><strong>333</strong><span>关注</span></div></div>
+    <div class="about-empty"><p>视频列表暂时未同步，去 B 站看看最新投稿。</p><a href="https://space.bilibili.com/475363158/upload/video" target="_blank" rel="noopener noreferrer">查看投稿 <span aria-hidden="true">↗</span></a></div>
+    <p class="about-data-note">统计更新于 <time datetime="2026-09-29T09:30:27.970Z">2026/09/29</time></p>
+  </div>
+  </section>
+  <div class="about-colophon"><div><span class="about-colophon-title">Keep learning. Keep building.</span><p>从 Pointer 到 Pixel，从 Algorithm 到 Render。</p></div><a class="about-text-link" href="/atom.xml"><i class="fa-solid fa-rss" aria-hidden="true"></i> 订阅博客 <span aria-hidden="true">↗</span></a></div>
+</div>
+
+  </div>
+  <!-- 原文链接/阅读更多：仅当page.link存在时显示 -->
+  
+  <!-- 文章底部组件区：仅对「post」「docs」布局生效 -->
+  
+  <!-- 文章底部元信息：复用子模板 -->
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  <!-- 文档导航（group+order） -->
+  
+
+  
+  <!-- 文章推荐 -->
+  
+  
+  <!-- Custom Files postEnd begin-->
+  <div class="tf-reading-tools"><button type="button" data-read-mode aria-pressed="false">专注阅读</button><button type="button" data-print>打印文章</button><a href="/archives/">返回归档 ↗</a></div>
+
+  <!-- Custom Files postEnd end-->
+</article>
+<!-- 评论区：仅当未明确禁用时显示 -->
+
+
+
+</div>
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+  
+
+
+<div class="widget-sticky pjax">
+
+</div>
+
+
+<div class="widget pjax"><!-- pjax占位 blogger--></div>
+
+<div class="widget pjax"><!-- pjax占位 category--></div>
+
+<div class="widget pjax"><!-- pjax占位 tagcloud--></div>
+
+<div class="widget pjax"><!-- pjax占位 qrcode--></div>
+
+<div class="widget pjax"><!-- pjax占位 webinfo--></div>
+
+<div class="widget pjax"><!-- pjax占位 lastupdate--></div>
+
+<div class="widget pjax"><!-- pjax占位 recent--></div>
+
+<div class="widget pjax"><!-- pjax占位 tree--></div>
+
+<div class="widget pjax"><!-- pjax占位 related--></div>
+
+<div class="widget pjax"><!-- pjax占位 tagtree--></div>
+
+<div class="widget pjax"><!-- pjax占位 artalk--></div>
+
+<div class="widget pjax"><!-- pjax占位 memos_carousel--></div>
+
+
+  <!-- Custom Files side begin -->
+  
+  <!-- Custom Files side end -->
+</aside>
+
+
+
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<pjax>
+<script>
+  window.pdata={}
+  pdata.ispage=false;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  pdata.commentConfig={};
+  //  see: /layout/_logic/_cover_ctrl.ejs
+  
+</script>
+</pjax>
+
+        </div>
+        
+  
+  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+    <br><br>
+    
+      
+        <br>
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          
+            
+              <a href="/atom.xml"
+                class="social fa-solid fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div class='copyright'>
+        <p>© 2026 <a href="/about/">recode</a> · Pixel &amp; Pointer</p>
+
+        </div>
+      
+    
+      
+        
+          <div><p>Built with <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; <a target="_blank" rel="noopener" href="https://volantis.js.org/">Volantis</a> · Tephrofos edition</p>
+</div>
+        
+      
+    
+    <!-- Custom Files footer begin-->
+    <p class="tf-icp"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">辽ICP备2026000633号-1</a></p>
+
+    <!-- Custom Files footer end-->
+  </footer>
+
+
+        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" title="top"></a>
+      </div>
+    </div>
+    <div>
+      
+<script>
+  
+  volantis.css("/vendor/fontawesome-6.6.0/css/all.min.css");
+  
+  
+  
+</script>
+
+<!-- required -->
+
+
+<!-- internal -->
+<!-- 这里不能使用 Hexo 内置的 helper: js(theme.cdn.volantis_app) ， 会导致多加一个 config.site_root -->
+<script src="/js/app.js"></script>
+
+
+
+
+<!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>window.pixelTheme?.connect();</script>
+
+
+
+
+<script>
+function loadDataService(){
+  const cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+  if (cardlinks?.length > 0) {
+    volantis.js("/js/plugins/tags/siteinfo.js", { defer: true }).then(function () {
+      setCardLink(cardlinks);
+    });
+  }
+  const timelinecard = document.querySelector(".tag-plugin.timeline.ds-timeline");
+  if (timelinecard){
+    volantis.js("https://unpkg.com/marked@14.1.2/marked.min.js").then(function () {
+      volantis.js("/js/plugins/tags/timeline.js", { defer: true });
+    });
+  }
+  const voiceAudios = document.querySelectorAll('.voice>audio');
+  if (voiceAudios?.length > 0) {
+    volantis.js("/js/plugins/tags/chat/voice.js", { defer: true }).then(function () {
+      createVoiceDom(voiceAudios);
+    });
+  }
+  const videos = document.querySelectorAll('.video>video');
+  if (videos?.length > 0) {
+    volantis.js("/js/plugins/tags/chat/video.js", { defer: true }).then(function () {
+      videoEvents(videos);
+    });
+  }
+  const files = document.querySelectorAll('.chat-file');
+  if (files?.length > 0) {
+    volantis.js("/js/plugins/tags/chat/download-file.js", { defer: true }).then(function () {
+      downloadFileEvent(files);
+    });
+  }
+    // chat iphone time
+    let phoneTimes = document.querySelectorAll('.chat .status-bar .time');
+    let firstAdjustInterval = null;
+    let mainInterval = null;
+
+    if (phoneTimes.length > 0) {
+      NowTime();
+      const date = new Date();
+      const sec = date.getSeconds();
+      firstAdjustInterval = setInterval(firstAdjustTime, 1000 * (60 - sec));
+      
+
+      function firstAdjustTime() {
+        NowTime();
+        if (firstAdjustInterval) {
+          clearInterval(firstAdjustInterval);
+          firstAdjustInterval = null;
+        }
+        mainInterval = setInterval(NowTime, 1000 * 60);
+        
+      }
+
+      function NowTime() {
+        for (let i = 0; i < phoneTimes.length; ++i) {
+          const timeSpan = phoneTimes[i];
+          const date = new Date();
+          const hour = date.getHours();
+          const min = date.getMinutes();
+          timeSpan.innerHTML = check(hour) + ":" + check(min);
+        }
+      };
+
+      function check(val) {
+        if (val < 10) {
+          return ("0" + val);
+        }
+        return (val);
+      }
+    }
+
+    // chat quote - 存储事件监听器以便清理
+    const quoteClickHandlers = new Map();
+    const chat_quote_obverser = new IntersectionObserver((entries, observer) => {
+      entries.filter((entry) => { return entry.isIntersecting }).sort((a, b) => a.intersectionRect.y !== b.intersectionRect.y ? a.intersectionRect.y - b.intersectionRect.y : a.intersectionRect.x - b.intersectionRect.x).forEach((entry, index) => {
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('quote-blink');
+            setTimeout(() => {
+              entry.target.classList.remove('quote-blink');
+            }, 1000);
+          }, Math.max(100, 16) * (index + 1));
+        });
+    });
+
+    var chatQuotes = document.querySelectorAll(".chat .talk .quote");
+    chatQuotes.forEach((quote) => {
+      const handler = function () {
+        var chatCellDom = document.getElementById("quote-" + quote.getAttribute("quotedCellTag"));
+        if (chatCellDom) {
+          var chatDiv = chatCellDom.parentElement;
+          var mid = chatDiv.clientHeight / 2;
+          var offsetTop = chatCellDom.offsetTop;
+          if (offsetTop > mid - chatCellDom.clientHeight / 2) {
+            chatDiv.scrollTo({
+              top: chatCellDom.offsetTop - mid + chatCellDom.clientHeight / 2,
+              behavior: "smooth"
+            });
+          } else {
+            chatDiv.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          }
+          chat_quote_obverser.observe(chatCellDom);
+        }
+      };
+      quote.addEventListener('click', handler);
+      quoteClickHandlers.set(quote, handler); // 保存处理器引用
+    });
+
+volantis.pjax.send(()=>{
+      // 断开观察器
+      if (chat_quote_obverser) {
+        chat_quote_obverser.disconnect();
+      }
+      
+      // 移除所有 click 事件监听器
+      quoteClickHandlers.forEach((handler, quote) => {
+        quote.removeEventListener('click', handler);
+      });
+      quoteClickHandlers.clear();
+},"chatQuotes");
+
+
+
+
+
+
+
+
+
+
+
+};
+loadDataService();
+volantis.pjax.push(()=>{
+    loadDataService();
+},"loadDataService");
+</script>
+
+
+
+  <script defer src="/vendor/vanilla-lazyload-19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+      <script>
+  volantis.layoutHelper("comments",`<div id="artalk_container"><i class="fa-solid fa-cog fa-spin fa-fw fa-2x"></i></div>`);
+  function load_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0])return;
+    volantis.css("https://comments.recode88.cn/dist/Artalk.css");
+    
+    volantis.js("https://comments.recode88.cn/dist/Artalk.js").then(pjax_artalk);
+    
+  }
+
+  function pjax_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0])return;
+    let path = pdata.commentPath;
+    let placeholder = pdata.commentPlaceholder || "欢迎留言交流" || "";
+    if (path.length == 0) {
+      path = '' || decodeURI(window.location.pathname);
+    }
+    if(!'posts/:title/'.includes('/index.html')) {
+      path = path.replaceAll('/index.html', '/').replaceAll('.html', '')
+    }
+
+    volantis.artalk = Artalk.init(Object.assign({"server":"https://comments.recode88.cn","path":"","placeholder":"欢迎留言交流","visitor":false,"latex":false,"imageUploader":{"api":null,"token":null,"resp":null}}, {
+      el: '#artalk_container',
+      pageKey: path,
+      pageTitle: document.title,
+      placeholder: placeholder,
+      site: 'Pixel &amp; Pointer',
+      darkMode: volantis.dark.mode === "dark",
+      pvEl: '#artalk_visitors',
+
+      
+    }));
+    const fancyBoxInstance = new VolantisFancyBox();
+    fancyBoxInstance.bind('.atk-content img:not([atk-emoticon])');
+  }
+
+  load_artalk();
+  volantis.pjax.push(()=>{
+    if (typeof Artalk === "undefined") {
+      load_artalk();
+    } else {
+      pjax_artalk();
+    }
+  },'artalk');
+
+  function dark_artalk() {
+    if(!document.querySelectorAll("#artalk_container")[0]) return;
+    volantis?.artalk?.setDarkMode(volantis.dark.mode === "dark")
+  }
+  volantis.dark.push(dark_artalk,"dark_artalk");
+</script>
+
+    
+
+
+
+
+
+<!-- optional -->
+
+  <script>
+  async function loadSearchScript() {
+    
+        
+    
+    return volantis.js("/js/volantis-search.js");
+  }
+
+  function loadSearchService() {
+    loadSearchScript();
+    document.querySelectorAll(".input.u-search-input").forEach((e) => {
+      e.removeEventListener("focus", loadSearchService, false);
+    });
+
+    document.querySelectorAll(".u-search-form").forEach((e) => {
+      e.addEventListener("submit", (event) => {
+        event.preventDefault();
+      }, false);
+    });
+  }
+
+  // 打开并搜索 字符串 s
+  function OpenSearch(s) {
+    if (typeof SearchService === 'undefined')
+      loadSearchScript().then(() => {
+        SearchService.setQueryText(s);
+        SearchService.search();
+      });
+    else {
+      SearchService.setQueryText(s);
+      SearchService.search();
+    }
+  }
+
+  // 访问含有 ?s=xxx  的链接时打开搜索 // 与搜索引擎 structured data 相关: /scripts/helpers/structured-data/lib/config.js
+  if (window.location.search && /^\?s=/g.test(window.location.search)) {
+    let queryText = decodeURI(window.location.search)
+      .replace(/\ /g, "-")
+      .replace(/^\?s=/g, "");
+    OpenSearch(queryText);
+  }
+
+  // 搜索输入框获取焦点时加载搜索
+  document.querySelectorAll(".input.u-search-input").forEach((e) => {
+    e.addEventListener("focus", loadSearchService, false);
+  });
+</script>
+
+
+
+
+
+
+
+  <script>
+
+
+
+  function pjax_highlightjs_copyCode(){
+    if (!(document.querySelector(".highlight .code pre") ||
+      document.querySelector(".article pre code"))) {
+      return;
+    }
+    VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
+  }
+  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
+  volantis.pjax.push(pjax_highlightjs_copyCode,"pjax_highlightjs_copyCode")
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- pjax -->
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
+  // 发现一个问题：手动写的h2标记会进入toc，但是没有锚点定位
+  function listenSidebarTOC() {
+    const navItems = document.querySelectorAll(".toc li");
+    if (!navItems.length) return;
+    const targets = []
+    const sections = Array.from(navItems).forEach((element) => {
+      const link = element.querySelector(".toc-link");
+      const target = document.getElementById(
+        link.getAttribute("href") ? decodeURI(link.getAttribute("href")).replace("#", "") : link.getAttribute("toc-action")?.split("toc-")[1] // 兼容 hexo-blog-encrypt
+      );
+      targets.push(target)
+      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
+      if (link.getAttribute("href")) {
+        link.setAttribute("toc-action", "toc-" + decodeURI(link.getAttribute("href")).replace("#", ""))
+        link.removeAttribute("href")
+      }
+      // 配置 点击 触发新的锚点定位
+      if (target && target.id) {
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          // 这里的 addTop 是通过错位使得 toc 自动展开.
+          volantis.scroll.to(target, { addTop: 5, observer: true })
+          // Anchor id
+          history.pushState(null, document.title, "#" + target.id);
+        });
+      }
+      return target;
+    });
+
+    function activateNavByIndex(target) {
+      if (target.classList.contains("active-current")) return;
+
+      document.querySelectorAll(".toc .active").forEach((element) => {
+        element.classList.remove("active", "active-current");
+      });
+      target.classList.add("active", "active-current");
+      let parent = target.parentNode;
+      while (!parent.matches(".toc")) {
+        if (parent.matches("li")) parent.classList.add("active");
+        parent = parent.parentNode;
+      }
+    }
+
+    // 方案一：
+    volantis.activateNavIndex = 0
+    activateNavByIndex(navItems[volantis.activateNavIndex])
+    if (targets[0]) {
+      volantis.scroll.push(volantis.debounce(() => {
+        if (targets[0].getBoundingClientRect().top >= 0) {
+          volantis.activateNavIndex = 0
+        } else if (targets[targets.length - 1].getBoundingClientRect().top < 0) {
+          volantis.activateNavIndex = targets.length - 1
+        } else {
+          for (let index = 0; index < targets.length; index++) {
+            const target0 = targets[index];
+            const target1 = targets[(index + 1) % targets.length];
+            if (target0.getBoundingClientRect().top < 0 && target1.getBoundingClientRect().top >= 0) {
+              volantis.activateNavIndex = index
+              break;
+            }
+          }
+        }
+        activateNavByIndex(navItems[volantis.activateNavIndex])
+      }),"sidebar-toc")
+    }
+
+    // 方案二：
+    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
+    // function findIndex(entries) {
+    //   let index = 0;
+    //   let entry = entries[index];
+    //   if (entry.boundingClientRect.top > 0) {
+    //     index = sections.indexOf(entry.target);
+    //     return index === 0 ? 0 : index - 1;
+    //   }
+    //   for (; index < entries.length; index++) {
+    //     if (entries[index].boundingClientRect.top <= 0) {
+    //       entry = entries[index];
+    //     } else {
+    //       return sections.indexOf(entry.target);
+    //     }
+    //   }
+    //   return sections.indexOf(entry.target);
+    // }
+    // function createIntersectionObserver(marginTop) {
+    //   marginTop = Math.floor(marginTop + 10000);
+    //   let intersectionObserver = new IntersectionObserver(
+    //     (entries, observe) => {
+    //       let scrollHeight = document.documentElement.scrollHeight;
+    //       if (scrollHeight > marginTop) {
+    //         observe.disconnect();
+    //         createIntersectionObserver(scrollHeight);
+    //         return;
+    //       }
+    //       let index = findIndex(entries);
+    //       activateNavByIndex(navItems[index]);
+    //     }, {
+    //       rootMargin: marginTop + "px 0px -100% 0px",
+    //       threshold: 0,
+    //     }
+    //   );
+    //   sections.forEach((element) => {
+    //     element && intersectionObserver.observe(element);
+    //   });
+    // }
+    // createIntersectionObserver(document.documentElement.scrollHeight);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    volantis.requestAnimationFrame(listenSidebarTOC)
+  });
+  volantis.pjax.push(listenSidebarTOC,"listenSidebarTOC");
+</script>
+
+
+
+
+
+<script>
+  document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+      // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
+      const { saveData, effectiveType } = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {}
+      if (getComputedStyle(document.querySelector("#safearea"), null)["display"] == "none" || saveData || /2g/.test(effectiveType)) {
+        document.querySelectorAll(".reveal").forEach(function (e) {
+          e.style["opacity"] = "1";
+        });
+        document.querySelector("#safearea").style["display"] = "block";
+      }
+    }
+  }
+</script>
+
+
+
+
+
+
+
+    </div>
+    <!-- import body_end begin-->
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    <div class="tf-reading-progress" aria-hidden="true"></div>
+<script src="/js/tephrofos.js" defer></script>
+
+
+    <!-- Custom Files bodyEnd end-->
+  </body>
+</html>
